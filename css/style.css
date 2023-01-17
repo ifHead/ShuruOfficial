@@ -1,0 +1,402 @@
+:root {
+  --vh: 100%;
+}
+
+html,
+body {
+  height: 100vh;
+  height: var(--vh);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  cursor: none !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-x: hidden !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+@import url(
+  "https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap"
+);
+
+body {
+  position: relative;
+  /*ios는 height 고정값이 없으면 가로스크롤이 발생함*/
+  height: 6000px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  max-width: 100% !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-weight: 300;
+  font-size: 2em;
+
+  /*드래그 방지*/
+  -webkit-user-select: none !important;
+  -moz-user-select: -moz-none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.not_scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 1em;
+}
+
+#luxy{
+  -ms-overflow-style: none;
+  margin: 0px;
+  margin-top: -25px;
+  padding: 0px;
+  height: 6500px;
+  width : 100%;
+}
+
+#p5canvas_mouse{
+  pointer-events: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#SpaceContainer{
+
+}
+
+#SkyBG{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(
+    180deg, 
+    rgb(17, 19, 64) 0%, 
+    rgba(23, 31, 78, 1) 40%,
+    rgba(26, 78, 118, 1) 100%
+  );
+  width:100%;
+  height: 80vh;
+  min-height: 1400px;
+  z-index: 0;
+}
+
+#StarSpecFG{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: URL("/Image/animatedStars.png");
+  background-size: 40%;
+  background-repeat: repeat;
+  width: 100%;
+  height: 130vh;
+  z-index: 0;
+}
+
+#StarMainFG {
+  position: absolute;
+  transform-origin: 0 0;
+  rotate: 15deg;
+  left: 50%;
+  top: 50vh;
+  transform: translate(-50%, -58%);
+  width: 100%;
+  max-width: 2500px;
+  min-height: 100px;
+  z-index: 1;
+}
+
+#SkyLine {
+  position: absolute;
+  top: 50vh;
+  width: 100%;
+  min-width: 500px;
+  background-size: 100%;
+}
+
+.CloudLineContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.CloudLine {
+  width: 100%;
+  z-index: 2;
+}
+
+.BGAfterBackground {
+  top: -50vw;
+  width: 100%;
+  height: 200vw;
+  position: relative;
+  background: linear-gradient(180deg,
+    rgb(225, 242, 255) 0%,
+    rgba(105, 187, 249, 1) 60%,
+    rgba(105, 187, 249, 0) 100%
+  );
+  z-index: -1;
+}
+
+#Logo3D {
+  position: absolute;
+  left: 50%;
+  top: 43vh;
+  top: calc(var(--vh, 1vh) * 46);
+  width: 30%;
+  min-height: 50px;
+  transform: translate(-45%, -65%);
+  z-index: 1;
+}
+
+#LogoDeco {
+  position: absolute;
+  top: 48vh;
+  left: 51.5%;
+  width: 60%;
+  min-height: 50px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#FlatSkyBG {
+  position: relative;
+  top: -6000px;
+  width: 100%;
+  height: 3400px;
+  background-color: rgb(105, 187, 249);
+  z-index: -1;
+}
+
+#FlatSkyCloud {
+  background-image: url("/Image/Cloud.png");
+  width: 100%;
+  background-size: 50%;
+  height: 4100px;
+  background-repeat: repeat round;
+}
+
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: local('Pretendard Variable'), url('./woff2/pretendardVar.woff2') format('woff2-variations');
+}
+
+p {
+  font-family: 'Pretendard Variable';
+  font-size: 0.5em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/*---------------------------------------------------*/
+/*---neumorphism button----------------------------------------*/
+/*----------------------------------------------------*/
+div.circle {
+  top: 30px;
+  position: relative;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+div.circle:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 350px;
+  height: 350px;
+  content: " ";
+  transition: 0.3s ease-out;
+  border-radius: 50px;
+  filter: blur(5px);
+  box-shadow: 8px 8px 35px #9493a3, -8px -8px 35px #fff;
+}
+
+div.circle:hover:before {
+  box-shadow: 5px 5px 15px #a9a8b7, 5px 5px 15px #fff,
+  inset -3px -3px 10px #fff,inset 1px 1px 3px #c0c0c7;
+  transition: 0.1s ease-in;
+}
+
+div.circle:active:before {
+  box-shadow: 0px 0px 0px #a9a8b7, 0px 0px 0px #fff,
+    inset -8px -8px 25px #fff, inset 8px 8px 25px #7c7b86;
+  transition: 0.05s ease-in;
+}
+
+div.circle p {
+  position: relative;
+  z-index: 5;
+  user-select: none;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------*/
+/*---glass email form-------------------------------*/
+/*---------------------------------------------------*/
+.card {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  width: 40%;
+  height: 540px;
+  min-width: 320px;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(300deg,
+      rgba(69, 69, 80, 0.568),
+      #cec9ee3d);
+  box-shadow:
+    inset 0.1em 0.1em 0.2em 0 rgba(217, 216, 235, 0.1),
+    inset -0.1em -0.1em 0.2em 0 rgba(6, 14, 44, 0.2);
+  border-radius: 30px;
+  z-index: 1000;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    transform: translateY(-40px);
+  }
+
+  50% {
+    transform: translateY(40px);
+  }
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.form h2 {
+  position: relative;
+  color: rgb(233, 233, 233);
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+
+  text-align: center;
+}
+
+.form .inputBx {
+  margin: 20px 40px 0px 40px;
+}
+
+.form .inputBx input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
+  padding: 12px 20px 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255, 0.1);
+  border-right: 1px solid rgb(1, 1, 1, 0.1);
+  border-bottom: 1px solid rgb(1, 1, 1, 0.1);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.05);
+}
+
+.form .inputBx textarea {
+  width: 100%;
+  min-height: 200px;
+  height: 50%;
+  padding-top: 20px;
+  font-family: 'Pretendard Variable';
+  resize: none;
+  background: rgb(1, 1, 1, 0.1);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 1px solid rgb(255, 255, 255, 0.15);
+  border-right: 1px solid rgb(1, 1, 1, 0.1);
+  border-bottom: 2px solid rgb(1, 1, 1, 0.1);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff !important;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.05);
+}
+
+.form .inputBx input::placeholder {
+  color: #fff;
+}
+
+.form .inputBx textarea::placeholder {
+  padding-top: 3px;
+  color: rgb(255, 255, 255);
+}
+
+.form .inputBx input[type="submit"] {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  max-width: 150px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  transition: .1s ease-in-out;
+}
+
+.form .inputBx input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+.text {
+  margin-top: 5px;
+  color: #fff;
+}
+
+.text a {
+  margin-top: 5px;
+  color: #fff;
+}

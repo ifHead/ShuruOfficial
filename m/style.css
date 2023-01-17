@@ -1,0 +1,282 @@
+:root {
+	--vh: 100%;
+}
+
+html,
+body {
+	height: 100vh;
+	height: var(--vh);
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	max-width: 100% !important;
+	overflow-x: hidden !important;
+	-webkit-overflow-x: hidden !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	overflow-x: hidden;
+}
+
+canvas {
+	display: block;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+
+body {
+	position: relative;
+	/*ios는 height 고정값이 없으면 가로스크롤이 발생함*/
+	height: 6000px;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto;
+	max-width: 100% !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	font-weight: 300;
+	height: 100vh;
+	font-size: 2em;
+
+	/*드래그 방지*/
+	-webkit-user-select: none !important;
+	-moz-user-select: -moz-none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	/* Remove scrollbar space */
+	background: transparent;
+	/* Optional: just make scrollbar invisible */
+}
+
+.box {
+	position: relative;
+	display: block;
+	margin: auto;
+	top: calc(var(--vh, 1vh) * 50);
+	transform: translateY(-50%);
+	width: 50%;
+	max-height: 50vh;
+	max-width: 50vh;
+	background-color: skyblue;
+}
+
+.box::after {
+	display: block;
+	content: "";
+	padding-bottom: 100%;
+}
+
+.container {
+	width: 100%;
+	height: 4000px;
+	/* margin: 0 auto; */
+}
+
+.block {
+	min-width: 280px;
+	position: relative;
+	/* width: calc(30vw - 40px); */
+	flex: 1;
+	min-height: 200px;
+	height: 14vw;
+	/* background-color: lightgrey; */
+	outline: 1px solid lightgrey;
+	background:
+		linear-gradient(to top right, transparent 49.9%, lightgrey 49.9%, lightgrey 50.1%, transparent 50.1%),
+		linear-gradient(to bottom right, transparent 49.9%, lightgrey 49.9%, lightgrey 50.1%, transparent 50.1%);
+	margin: 20px;
+}
+
+.content {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.not_scroll {
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.text {
+	display: block;
+	width: 100px;
+	height: 100px;
+	font-size: 1em;
+}
+
+#luxy {
+	-ms-overflow-style: none;
+	margin: 0px;
+	margin-top: -25px;
+	padding: 0px;
+	height: 6500px;
+	width: 100%;
+}
+
+#p5canvas_mouse {
+	pointer-events: none;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#SkyBG {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	left: 0px;
+	top: 0px;
+	background: linear-gradient(180deg,
+		rgb(4, 8, 74) 0%,
+		rgba(12, 11, 71, 1) 17%,
+		rgba(27, 25, 118, 1) 100%
+	);
+	width: 100%;
+	height: 80vh;
+	z-index: -100;
+}
+
+#SkyLine {
+	position: relative;
+	transform: translateY(-40%);
+	float: left;
+	width: 100%;
+	background-size: 100%;
+}
+
+#StarSpecFG {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url("/Image/animatedStars.png");
+	background-size: 40%;
+	width: 100%;
+	height: 200vh;
+}
+
+#StarMainFG {
+	position: absolute;
+	left: 50%;
+	top: calc(var(--vh, 1vh) * 43);
+	transform: translate(-50%, -50%);
+	width: 130%;
+	max-width: 2500px;
+	min-height: 100px;
+}
+
+#Logo3D {
+	position: absolute;
+	top: 43vh;
+	top: calc(var(--vh, 1vh) * 43);
+	left: 50%;
+	width: 40%;
+	min-height: 50px;
+	transform: translate(-50%, -50%);
+}
+
+#LogoDeco {
+	position: absolute;
+	top: 50vh;
+	top: calc(var(--vh, 1vh) * 50);
+	left: 50%;
+	width: 70%;
+	min-height: 100px;
+	transform: translate(-50%, -50%);
+}
+
+p {
+	font-family: 'Noto Sans KR';
+	font-size: 0.5em;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h1 {
+	font-family: 'NanumSquare', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.neumorphicContainer {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	background: #ECF0F3;
+}
+
+.neumorphism-1 {
+	height: 250px;
+	width: 250px;
+	background: #ECF0F3;
+	border-radius: 35px;
+	box-shadow: -17px -17px 22px #ffffffb2,
+		10px 10px 22px rgba(209, 217, 230, 1),
+		inset -10px -10px 30px rgba(255, 255, 255, 0.6),
+		inset 15px 15px 22px rgba(209, 217, 230, 0.3);
+}
+
+.neumorphism-2 {
+	margin: 50px;
+	height: 250px;
+	width: 250px;
+	background: #ECF0F3;
+	border-radius: 35px;
+	box-shadow: inset -10px -10px 22px #ffffffb0,
+		inset 10px 10px 22px rgba(209, 217, 230, 1),
+		15px 15px 22px rgba(209, 217, 230, 0.1),
+		-15px -15px 22px rgba(255, 255, 255, 0.1);
+}
+
+#SkyLine {
+	position: relative;
+	transform: translateY(-40%);
+	float: left;
+	width: 100%;
+	background-size: 100%;
+}
+
+.neumorphism-3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	width: 250px;
+	background: #dde1e7;
+	border-radius: 50%;
+	box-shadow: -14px -14px 22px #ffffffa6,
+		10px 10px 22px rgba(94, 104, 121, 0.6);
+	position: relative;
+}
+
+.neumorphism-3:after {
+	content: '';
+	position: absolute;
+	height: 80%;
+	width: 80%;
+	background-color: transparent;
+	border-radius: 50%;
+	box-shadow: inset -10px -10px 18px #ffffffb0, inset 8px 8px 18px rgba(94, 104, 121, 0.5);
+}

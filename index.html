@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shuru Lab</title>  
+  
+  <meta name="author" content="Shuru">
+  <meta name="description" content="Welcome! This is the official website of Shuru, Inc.">
+ 
+  <script src="/js/anim/gsap.js"></script>
+  <script src="/js/anim/scrolltriggerplugin.js"></script>
+  <script src="/js/anim/ScrollToPlugin.min.js"></script>
+  <script src="/js/anim/Draggable.min.js"></script>
+  <script src="/js/anim/MotionPathPlugin.min.js"></script>
+  <script src="/js/anim/TextPlugin.min.js"></script>
+  <script src="/js/anim/EasePack.min.js"></script>
+  <script src="/js/jQ/jQ.js"></script>
+
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="/Icon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Icon/Favicon/favicon-144x144.png">
+  <link rel="manifest" href="/Icon/Favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/Icon/Favicon/favicon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--페이지 스크롤시 주소창 감추기-->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  <!-- 오픈그래프 -->
+
+
+  <!--모바일 가로스크롤 제거-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+  
+  <script src="/js/util/setupUtils.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/mq960pc.css">
+  <link rel="stylesheet" type="text/css" href="./css/gsap.css">
+</head>
+
+
+<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+<div id="luxy">
+<div id="SpaceContainer">
+  <img id="StarMainFG" src="/Image/StarsFG.png">
+  <div id="SkyBG"></div>
+  <div id="StarSpecFG"></div>
+  <img id="SkyLine" src="/Image/skyline.png">
+  <img id="Logo3D" src="/Image/3DLogo.png">
+  <img id="LogoDeco" src="/Image/Objects.png">
+</div>
+  
+  
+<div class="luxy-el CloudLineContainer" data-speed-y="-100">
+  <img class="CloudLine" src="/Image/CloudLine.png">
+  <div class="BGAfterBackground"></div>
+</div>
+
+<div id="FlatSkyBG">
+  <div id="FlatSkyCloud"></div>
+  
+  <div class="circle">
+    <p>Submit</p>
+  </div>
+
+  <div class="card">
+    <div class="form">
+        <h2>Contact Us</h2>
+        <form action="">
+            <div class="inputBx">
+                <input type="text" placeholder="Full Name">
+            </div>
+            <div class="inputBx">
+                <input type="email" placeholder="Your Email">
+            </div>
+            <div class="inputBx">
+                <textarea name="message" id="" placeholder="Type Mesage Here..."></textarea>
+            </div>
+            <div class="inputBx">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+  <!-- <img class="LogoDeco" src="/Image/Satellite.png">
+  <img class="LogoDeco2" src="/Image/Spaceship.png">
+  <img class="LogoDeco3" src="/Image/Robot.png">
+  <img class="LogoDeco4" src="/Image/Saturn.png"> -->
+
+  <!-- <button id="btns">리빌버튼</button> -->
+
+
+  <!-- <div style="position: absolute; top: 0px;" class="neumorphicContainer">
+<div class="neumorphism-1"></div>
+<div class="neumorphism-2"></div>
+<div class="neumorphism-3"></div>
+</div>-->
+</div> <!-- luxy smoothscroll end -->
+<!-- ------------------- ------------------- ------------------- ------------------- -->
+
+
+<div id="p5canvas_mouse"></div>
+<div id="releasedCursor" style="position: fixed; left:-9999px; top: -9999px;"></div>
+<!-- pointer-events: none; -->
+
+<script src="/js/util/luxy.js"></script>
+<script charset="utf-8">luxy.init();</script>
+
+<script src="/js/gsap/gsap.js"></script>
+<script src="/js/p5/p5.min.js"></script>
+<script type="module" src="/js/p5/sketch.js"></script>
+<!-- <script src="js/p5/ShuruJump/shuruJump.js"></script> -->
+<!-- <script src="/js/util/gotoTopAndFix.js"></script> -->
+
+
+<!-- 이미지 변경 데모 -->
+<!-- <button onclick="toggleImg()">toggle</button>
+<img id="img" src="/Icon/Favicon/favicon-144x144.png" />
+<script>
+function toggleImg() {
+  document.getElementById("img").src = "/Icon/Favicon/index_mv_bird.png";
+  setTimeout(function () { document.getElementById("img").src = "/Icon/Favicon/favicon-144x144.png"; }, 1000);
+}
+</script> -->
+<!-- 이미지 변경 데모 끝-->
+<div class="container2">
+  <h1>&nbsp;
+    <span class="auto-text" style="z-index: index 1000; color:white;"></span>
+  </h1>
+</div>
+
+<script src="/js/gsap/intro.js"></script>
+<script src="/js/util/mouseInfo.js"></script>
+
+<!-- <script>
+  document.getElementById("Logo3D").style.left = "100px";
+</script> -->
+<script src="/js/util/slightFollow.js"></script>
+
+<!-- Include JS Script and import 'typed.js' as module-->
+<script type="module" src="/js/Type-Effect-Library-master/index.js"></script>
+<script src="/js/apng/index.js"></script>
+</body>
+
+</html>
