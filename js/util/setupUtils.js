@@ -49,5 +49,9 @@ var webkit = !!ua.match(/WebKit/i);
 var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
 
 if (isMobile || iOSSafari) {
+	console.log(isMobile)
+	console.log(iOSSafari)
+	// document.querySelector('p5canvas_mouse').remove();
+	// document.querySelector('releasedCursor').remove();
 	location.replace("/m/");
 }

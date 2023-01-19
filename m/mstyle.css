@@ -1,0 +1,189 @@
+:root {
+	--vh: 100%;
+}
+
+html,
+body {
+	height: 100vh;
+	height: var(--vh);
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	max-width: 100% !important;
+	overflow-x: hidden !important;
+	-webkit-overflow-x: hidden !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	scrollbar-width: none;
+}
+
+canvas {
+	display: block;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+
+body {
+	position: relative;
+	/*ios는 height 고정값이 없으면 가로스크롤이 발생함*/
+	height: 16000px;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto;
+	max-width: 100% !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	font-weight: 300;
+	font-size: 2em;
+
+	/*드래그 방지*/
+	-webkit-user-select: none !important;
+	-moz-user-select: -moz-none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+}
+
+.not_scroll {
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+#SkyBG {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 0px;
+	top: 0px;
+	background: linear-gradient(180deg,
+		rgb(4, 8, 74) 0%,
+		rgb(64, 62, 179) 100%
+	);
+	width: 100%;
+	height: 80vh;
+	z-index: -100;
+}
+
+#StarSpecFG {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-image: URL("/Image/animatedStars.png");
+	background-repeat: repeat;
+	width: 100%;
+	height: 130vh;
+	z-index: 0;
+}
+
+#StarMainFG {
+	position: absolute;
+	left: 50%;
+	top: calc(var(--vh, 1vh) * 43);
+	top: 43vh;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 2500px;
+	min-height: 100px;
+}
+
+#SkyLine {
+	position: relative;
+	width: 100%;
+	top: 40vh;
+	background-size: 100%;
+}
+
+#BGAfterBackground {
+	position: absolute;
+	top: 85vh;
+	height: 200vw;
+	width: 100%;
+	background: linear-gradient(180deg,
+			rgba(225, 227, 255, 1) 0%,
+			rgba(105, 187, 249, 0) 100%);
+	z-index: -1;
+}
+
+#Logo3D {
+	position: absolute;
+	top: 25vh;
+	left: 50%;
+	width: 50%;
+	min-height: 50px;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+#LogoDeco {
+	position: absolute;
+	top: 35vh;
+	left: 50%;
+	width: 70%;
+	min-height: 100px;
+	transform: translate(-50%, -50%);
+}
+
+.CloudLine {
+	position: relative;
+	top: 0px;
+	transform: translateY(-10vh);
+	width: 100%;
+	z-index: 2;
+}
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'), url('./woff2/PretendardVariable.woff2') format('woff2-variations');
+}
+
+p {
+	font-family: 'Pretendard Variable';
+	font-size: 0.5em;
+	font-weight: 400;
+	font-style: normal;
+}
+
+#FlatSkyBG {
+	position: relative;
+	top: -5000px;
+	height: 10000px;
+	width: 100%;
+	background-color: rgb(105, 187, 249);
+	z-index: -1;
+}
+
+#FlatSkyCloud {
+	background-image: url("/Image/Cloud.png");
+	width: 100%;
+	background-size: 50%;
+	background-repeat: repeat round;
+}
+
+#FloorWall {
+	position: relative;
+	z-index: 2;
+	top: 0px;
+	width: 100%;
+	height: 800px;
+	background-image: url("/Image/FloorWallClear.jpg");
+	background-repeat: repeat;
+}
+
+#FloorWallProgress {
+	position: absolute;
+	background-image: url("/Image/FloorWallProgress.jpg");
+	width: 890px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 800px;
+}

@@ -1,34 +1,100 @@
-@media screen and (max-width:767px) {
-    #StarMainFG {   
-        transform-origin: 0% 0%;
-        rotate: 60deg;
-        top: 40vh;
-        top: calc(var(--vh, 1vh) * 40);
-        transform: translate(-50%, -50%);
-        width: 330%;
+@media all and (max-width:480px) {
+    #StarSpecFG {
+        background-size: 180%;
     }
 
-    #Logo3D {
-        width: 50%;
+    #StarMainFG {
+        transform-origin: 0% 0%;
+        rotate: 30deg;
+        top: 25vh;
+        transform: translate(-50%, -50%);
+        width: 180%;
+        z-index: 1;
     }
 
     #LogoDeco {
-        top: 47vh;
-        top: calc(var(--vh, 1vh) * 47);
+        top: 30vh;
         width: 80%;
+        z-index: 1;
     }
 
+    #BGAfterBackground {
+        top: 85vh;
+        height: 200vw;
+    }
+}
+
+@media all and (min-width:481px) and (max-width:767px) {
     html {
         cursor: auto;
     }
 
     #StarSpecFG {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-image: URL("/Image/animatedStars.png");
-        background-size: 170%;
-        width: 100%;
-        height: 200vh;
+        background-size: 120%;
+    }
+
+    #StarMainFG {
+        transform-origin: 0% 0%;
+        rotate: 30deg;
+        top: 25vh;
+        transform: translate(-50%, -50%);
+        width: 180%;
+        z-index: 1;
+    }
+
+    #LogoDeco {
+        top: 30vh;
+        width: 80%;
+        z-index: 1;
+    }
+
+    #BGAfterBackground {
+        height: 150vw;
+    }    
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+
+@media all and (min-width: 768px){
+    #StarSpecFG {
+        background-size: 100%;
+    }
+
+    #StarMainFG {
+        transform-origin: 0% 0%;
+        rotate: 30deg;
+        top: 33vh;
+        top: calc(var(--vh, 1vh) * 30);
+        transform: translate(-50%, -50%);
+        width: 120%;
+        z-index: 1;
+    }
+
+    #Logo3D {
+        top: 33vh;
+        top: calc(var(--vh, 1vh) * 30);
+        width: 30%;
+        min-width: 600px;
+    }
+
+    #LogoDeco {
+        top: 32vh;
+        width: 90%;
+        z-index: 1;
+    }
+
+    #BGAfterBackground {
+        height: 250vw;
+    }    
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+
+@media screen and (min-height:1500px) {
+    #BGAfterBackground {
+        top: 80vh;
+        height: 40vh;
     }
 }
