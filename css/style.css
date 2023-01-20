@@ -25,14 +25,8 @@ canvas {
   display: block;
 }
 
-@import url(
-  "https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap"
-);
-
 body {
   position: relative;
-  /*ios는 height 고정값이 없으면 가로스크롤이 발생함*/
-  height: 6000px;
   margin: 0;
   padding: 0;
   overflow-x: hidden !important;
