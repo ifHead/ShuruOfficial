@@ -4,7 +4,6 @@
 
 html,
 body {
-	height: 100vh;
 	height: var(--vh);
 }
 
@@ -29,7 +28,7 @@ canvas {
 body {
 	position: relative;
 	/*ios는 height 고정값이 없으면 가로스크롤이 발생함*/
-	height: 16000px;
+	height: 20000px;
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden !important;
@@ -68,6 +67,7 @@ body {
 	);
 	width: 100%;
 	height: 80vh;
+	min-height: 1200px;
 	z-index: -100;
 }
 
@@ -91,6 +91,7 @@ body {
 	width: 100%;
 	max-width: 2500px;
 	min-height: 100px;
+	z-index: -1;
 }
 
 #SkyLine {
@@ -98,11 +99,12 @@ body {
 	width: 100%;
 	top: 40vh;
 	background-size: 100%;
+	z-index: 1;
 }
 
 #BGAfterBackground {
 	position: absolute;
-	top: 85vh;
+	top: 95vh;
 	height: 200vw;
 	width: 100%;
 	background: linear-gradient(180deg,
@@ -132,7 +134,6 @@ body {
 
 .CloudLine {
 	position: relative;
-	top: 0px;
 	transform: translateY(-10vh);
 	width: 100%;
 	z-index: 2;
@@ -155,8 +156,9 @@ p {
 
 #FlatSkyBG {
 	position: relative;
-	top: -5000px;
-	height: 10000px;
+	top:-45vw;
+	height: 150vh;
+	min-height: 1100px;
 	width: 100%;
 	background-color: rgb(105, 187, 249);
 	z-index: -1;
@@ -165,16 +167,17 @@ p {
 #FlatSkyCloud {
 	background-image: url("/Image/Cloud.png");
 	width: 100%;
-	background-size: 50%;
+	height: 145vh;
+	background-size: 100%;
 	background-repeat: repeat round;
 }
 
 #FloorWall {
 	position: relative;
 	z-index: 2;
-	top: 0px;
+	top: -3px;
 	width: 100%;
-	height: 800px;
+	height: 650px;
 	background-image: url("/Image/FloorWallClear.jpg");
 	background-repeat: repeat;
 }
@@ -185,5 +188,28 @@ p {
 	width: 890px;
 	left: 50%;
 	transform: translateX(-50%);
-	height: 800px;
+	height: 650px;
+}
+
+/*--------------------------------------*/
+/*------Chars---------------------------*/
+/*--------------------------------------*/
+
+#ShuPaint {
+	position: relative;
+	background-image: url("/Image/AnimatedShu/shuPaint.png");
+	top: 250px;
+	left: 50%;
+	width: 320px;
+	height: 500px;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	transform: translateX(-57px);
+}
+
+/* 구획 */
+#Section {
+	position: relative;
+	width: 100%;
+	/* border: red solid 3px; */
 }
