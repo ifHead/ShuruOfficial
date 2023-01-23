@@ -87,12 +87,14 @@ body {
 }
 
 #BGAfterBackground {
-	position: relative;
-	height: 200vw;
+	position: absolute;
+	top: 80vh;
+	height: 100vh;
 	width: 100vw;
 	background: linear-gradient(180deg,
-			rgba(225, 227, 255, 1) 0%,
-			rgba(105, 187, 249, 0) 100%);
+		rgba(105, 187, 249, 1) 30%,
+		rgba(105, 187, 249, 0) 100%
+	);
 	z-index: 0;
 }
 
@@ -139,7 +141,7 @@ p {
 
 #FlatSkyBG {
 	position: relative;
-	top:-200vw;
+	top:0vw;
 	height: 150vh;
 	min-height: 1100px;
 	width: 100%;
@@ -148,6 +150,7 @@ p {
 }
 
 #FlatSkyCloud {
+	position: relative;
 	background-image: url("/Image/Cloud.png");
 	width: 100%;
 	height: 145vh;
@@ -158,7 +161,7 @@ p {
 #FloorWall {
 	position: relative;
 	z-index: 2;
-	top: -3px;
+	top: -1px;
 	width: 100%;
 	height: 650px;
 	background-image: url("/Image/FloorWallClear.jpg");
@@ -180,14 +183,10 @@ p {
 
 #ShuPaint {
 	position: relative;
-	background-image: url("/Image/AnimatedShu/shuPaint.png");
-	top: 250px;
+	width: 15%;
 	left: 50%;
-	width: 320px;
-	height: 500px;
-	background-size: 50%;
-	background-repeat: no-repeat;
-	transform: translateX(-57px);
+	top: 50%;
+	transform: translateX(-50%);
 }
 
 #ShuWrite {
@@ -202,24 +201,24 @@ p {
 	position: relative;
 	background-image: url("/Image/AnimatedShu/shuRun.png");
 	width: 100px;
-		height: 200px;
-		background-size: 50%;
+	height: 200px;
+	background-size: 50%;
 }
 
 #ShuSmile {
 	position: relative;
 	background-image: url("/Image/AnimatedShu/shuSmile.png");
 	width: 100px;
-		height: 200px;
-		background-size: 50%;
+	height: 200px;
+	background-size: 50%;
 }
 
 #ShuSketch {
 	position: relative;
 	background-image: url("/Image/AnimatedShu/shuSketch.png");
 	width: 100px;
-		height: 200px;
-		background-size: 50%;
+	height: 200px;
+	background-size: 50%;
 }
 
 

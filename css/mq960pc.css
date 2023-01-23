@@ -50,26 +50,19 @@
     }
 
     .BGAfterBackground {
-        top: -50vw;
         width: 100%;
-    }
-
-    .CloudLineContainer {
-        position: relative;
-        top: -10vh;
+        height: 250vh;
     }
 
     #FlatSkyBG {
-        top: -6000px;
-        height: 300vh;
-        max-height: 4000px;
+        height: 200vh;
+        max-height: 1000px;
     }
 
     #FlatSkyCloud {
         background-size: 100%;
-        top: 100vh;
-        height: 300vh;
-        max-height: 4000px;
+        height: 200vh;
+        max-height: 1000px;
     }
     
 }
@@ -84,30 +77,29 @@
         z-index: 1;
     }
 
+    .BGAfterBackground {
+        width: 100%;
+        height: 200vh;
+    }
+
     #SkyBG {
         height: 90vh;
     }
 
-    .CloudLineContainer {
-        top: -15vh;
-    }
-    
     #FlatSkyBG {
-        top: -6000px;
-        height: 150vh;
-        min-height: 2500px;
+        height: 250vh;
+        max-height: 1500px;
+    }
+
+    #FlatSkyCloud {
+        background-size: 50%;
+        height: 250vh;
+        max-height: 1500px;
     }
 
     #SkyLine {
         top: 50vh;
         z-index: 1;
-    }
-
-    #FlatSkyCloud {
-        background-size: 100%;
-        top: 100vh;
-        height: 150vh;
-        min-height: 2500px;
     }
 
     #Logo3D {
@@ -130,11 +122,14 @@
     }
     
     #FlatSkyBG {
-        height: 3100px;
+        height: 220vh;
+        max-height: 1800px;
     }
 
     #FlatSkyCloud {
-        height: 3100px;
+        background-size: 50%;
+        height: 220vh;
+        max-height: 1800px;
     }
 
     #Logo3D {
@@ -188,19 +183,19 @@
 
     .BGAfterBackground {
         top: -50vw;
+        height: 300vh;
         width: 100%;
     }
 
     #FlatSkyBG {
-        transform: translateY(-1000px);
-        height: 350vh;
-        min-height: 3000px;
+        height: 200vh;
+        min-height: 2000px;
     }
 
     #FlatSkyCloud {
-        /* background-size: 150%; */
-        height: 340vh;
-        min-height: 3000px;
+        background-size: 25%;
+        height: 200vh;
+        min-height: 2000px;
     }
 }
 /* ------------------------------------------------------------- */
@@ -213,10 +208,6 @@
 
     #SkyLine {
         top: 35vh;
-    }
-
-    .CloudLineContainer{
-        top: -30vh;
     }
 
     #Logo3D {
@@ -233,24 +224,17 @@
 
 
     #FlatSkyBG {
-        position: relative;
-        height: 270vh;
-        max-height:2200px;
+        max-height:2000px;
     }
 
     #FlatSkyCloud {
-        height: 270vh;
         background-size: 50%;
-        max-height: 2200px;
+        max-height: 2000px;
     }
 }
 
 
 @media screen and (min-height:1600px) {
-    .CloudLineContainer {
-        top: -18vh;
-    }
-
     #StarMainFG{
         top: 28vh;
         width: 250vw;
@@ -291,18 +275,15 @@
         top: -50vw;
         width: 100%;
         height: 250vh;
+        max-height: 2700px;
     }
 
     #FlatSkyBG {
-        position: relative;
-        height: 120vh;
-        max-height: 5000px;
+        max-height: 1500px;
     }
 
     #FlatSkyCloud {
-        height: 120vh;
-        top: 100vh;
         background-size: 50%;
-        max-height: 5000px;
+        max-height: 1500px;
     }
 }
