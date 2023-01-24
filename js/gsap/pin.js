@@ -41,7 +41,7 @@ tl
     scrollTrigger: {
         trigger: "#StructureTrigger_3",
         start: "top+=" + window.innerWidth * 0.3 + " center",
-        end: "bottom+=" + window.innerWidth * 0.3 + " top",
+        end: "bottom-=" + window.innerWidth * 0.3 + " top",
         scrub: true,
         markers: true,
     },

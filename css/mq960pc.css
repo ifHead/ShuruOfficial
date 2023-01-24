@@ -29,9 +29,9 @@
     }
 
     #LogoDeco {
-        top: 33vh;
+        top: 30vh;
         left: 50%;
-        width: 90%;
+        width: 90% !important;
         min-height: 50px;
         transform: translate(-50%, -50%);
     }
@@ -42,7 +42,7 @@
     }
 
     #SkyLine {
-        top: 40vh;
+        top: 50vh !important;
         width: 120%;
         transform: translateX(-10%);
         z-index: 1;
@@ -199,19 +199,20 @@
     }
 
     #SkyLine {
-        top: 35vh;
+        top: 42vh;
     }
 
     #Logo3D {
-        top: 26vh;
+        top: 42vh;
     }
 
     #LogoDeco {
-        top: 28vh;
+        width: 60%;
+        top: 43vh;
     }
 
     #StarMainFG{
-        top: 30vh;
+        top: 43vh;
     }
 
 
