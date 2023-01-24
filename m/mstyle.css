@@ -229,3 +229,50 @@ p {
 	width: 100%;
 	/* border: red solid 3px; */
 }
+
+/*---------------------------------------------------*/
+/*---gsap-------------------------------*/
+/*---------------------------------------------------*/
+
+#StructureContainer {
+	position: relative;
+	width: 100vw;
+	height: 300vh;
+	/* border:red solid 3px; */
+	margin: 0;
+	z-index: 12;
+}
+
+#Structure_1 {
+	position: absolute;
+	top: 0px;
+	opacity: 1;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/Image/House_1.jpg");
+	background-size: contain;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+#Structure_2 {
+	position: absolute;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/Image/House_2.jpg");
+	background-size: contain;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+#Structure_3 {
+	position: absolute;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/Image/House_3.jpg");
+	background-size: contain;
+	background-position: top center;
+	background-repeat: no-repeat;
+}

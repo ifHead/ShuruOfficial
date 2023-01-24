@@ -48,25 +48,20 @@
 
 
 <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
-
 <div id="smooth-content">
+  <img id="StarMainFG" src="/Image/StarsFG.png">
+  <div id="SkyBG"></div>
+  <div id="StarSpecFG"></div>
+  <img id="SkyLine" src="/Image/skyline.png">
+  <img id="Logo3D" src="/Image/3DLogo.png">
+  <img id="LogoDeco" src="/Image/Objects.png">
 
-<img id="StarMainFG" src="/Image/StarsFG.png" data-lag="2">
-<div id="SkyBG"  data-spped="1"></div>
-<div id="StarSpecFG"  data-lag="0.5"></div>
-<img id="SkyLine" src="/Image/skyline.png">
-<img id="Logo3D" src="/Image/3DLogo.png">
-<img id="LogoDeco" src="/Image/Objects.png">
-
-  
-<div class="CloudLineContainer">
-  <img class="CloudLine" src="/Image/CloudLine.png">
-  <div class="BGAfterBackground"></div>
-</div>
+  <!-- <div id="BGAfterBackground" ></div> -->
 
 <div id="FlatSkyBG">
   <div id="FlatSkyCloud"></div>
 </div>
+
 
 <div id="FloorWall">
   <div id="FloorWallProgress">
@@ -97,13 +92,22 @@
         </form>
     </div>
   </div> -->
-<div id="StructureContainer" style="border:black solid 3px;">
-  <div id="Structure_1" data-lag="0.5"></div>
+
+<div id="StructureContainer">
+  <div id="Structure_1"></div>
   <div id="Structure_2"></div>
   <div id="Structure_3"></div>
+  <div id="StructureTrigger_1"></div>
+  <div id="StructureTrigger_2"></div>
+  <div id="StructureTrigger_3"></div>
+  <div id="CorpDemo">
+    <div style="background: red; position: relative; top: 0; width: 100%; height: 63.3vw;"></div>
+    <div style="background: blue; position: relative; top: 0; width: 100%; height: 63.3vw;"></div>
+    <div style="background: red; position: relative; top: 0; width: 100%; height: 63.3vw;"></div>
+  </div>
 </div>
 
-<div id="Section" style="height: 110vh; background: red;">여기는 건축물이 지어지는 곳</div>
+
 <div id="Section" style="height:15vh; max-height: 300px; min-height: 100px; background-color: red;">띠</div>
 <div id="Section" style="background:cyan; height: 100vh;">여기는 카드 돌아가는 곳</div>
 <div id="Section" style="background:white; height: 15vh; max-height: 300px; min-height: 100px;">여백</div>
