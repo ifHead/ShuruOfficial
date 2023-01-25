@@ -130,7 +130,7 @@ body {
   position: absolute;
   top: 100vh;
   width: 100vw;
-  z-index: 31;
+  z-index: 3;
 }
 
 #CloudLine {
@@ -143,7 +143,7 @@ body {
   position: relative;
   width: 100vw;
   height: 270vh;
-  max-height: 2000px;
+  max-height: 3000px;
   transform: translateY(-50vw);
   background: linear-gradient(180deg,
     rgba(105, 187, 249, 1) 0%,
@@ -350,10 +350,10 @@ div.circle {
 
 div.circle:before {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 10%;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
   display: block;
   width: 33vw;
   height: 33vw;
@@ -602,7 +602,7 @@ div.circle p {
 #Band {
   margin-top: 10vh;
   display: flex;
-  transform: translateX(-100%);
+  transform: translateX(-500%);
   margin-bottom: 15vh;
   /* background-color: #ffdb01 */
 }
@@ -627,4 +627,77 @@ div.circle p {
   position: relative;
   height: 100vh;
   width: 100vw;
+}
+
+#AirPlane {
+  position: absolute;
+  top: 150vh;
+  left: 100vw;
+  height: 30vh;
+  max-height: 20vw;
+  z-index: 12;
+  opacity: 1;
+}
+
+#FallFrame {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: blue;
+}
+
+#Fall1 {
+  position: absolute;
+  top: -20vh;
+  height: 20vh;
+  max-height: 20vw;
+  left: 10vw;
+  z-index: 3;
+}
+
+#Fall2 {
+  position: absolute;
+  top: -40vh;
+  height: 40vh;
+  max-height: 20vw;
+  left: 15vw;
+  z-index: 3;
+}
+
+#Fall3 {
+  position: absolute;
+  top: -20vh;
+  height: 17vh;
+  max-height: 20vw;
+  left: 40vw;
+  z-index: 3;
+}
+
+#Fall4 {
+  position: absolute;
+  top: -40vh;
+  height: 40vh;
+  max-height: 30vw;
+  left: 55vw;
+  z-index: 3;
+}
+
+#Fall5 {
+  position: absolute;
+  top: -20vh;
+  height: 18vh;
+  max-height: 20vw;
+  left: 65vw;
+  z-index: 3;
+}
+
+#Fall6 {
+  position: absolute;
+  top: -20vh;
+  height: 15vh;
+  max-height: 20vw;
+  left: 80vw;
+  z-index: 3;
 }
