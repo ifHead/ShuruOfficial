@@ -8,7 +8,7 @@
     html {
         cursor: auto;
     }
-
+    
     #SkyBG {
         height: 65vh;
     }
@@ -48,11 +48,6 @@
         z-index: 1;
     }
 
-    #BGAfterBackground {
-        width: 100%;
-        height: 250vh;
-    }
-
     #FlatSkyBG {
         min-height: 1500px;
     }
@@ -62,6 +57,14 @@
         background-size: 100%;
     }
     
+    .BigTitleBox {
+        font-size: 35px;
+        width: 60%;
+    }
+
+    #Band {
+        height: 60px;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width:1320px){
@@ -72,11 +75,6 @@
         transform: translate(-50%, -50%);
         width: 230%;
         z-index: 1;
-    }
-
-    #BGAfterBackground {
-        width: 100%;
-        height: 200vh;
     }
 
     #SkyBG {
@@ -107,6 +105,15 @@
         transform: translate(-53%, -50%);
         top: 35vh;
         
+    } 
+
+    .BigTitleBox {
+        font-size: 41px;
+        width: 60%;
+    }
+
+    #Band {
+        height: 80px;
     }
 }
 /* ------------------------------------------------------------- */
@@ -135,6 +142,15 @@
         width: 80%;
         transform: translate(-53%, -50%);
     }
+
+    .BigTitleBox {
+        font-size: 65px;
+        width: 60%;
+    }
+
+    #Band {
+        height: 100px;
+    }
 }
 /* ------------------------------------------------------------- */
 /* ------------------------------------------------------------- */
@@ -144,7 +160,8 @@
     }
 
     #SkyBG{
-        height: 110vh;
+        height: 120vh;
+        min-height: 2000px;
     }
 
     #Logo3D {
@@ -175,19 +192,22 @@
         top: 50vh;
     }
 
-    #BGAfterBackground {
-        top: -220vh;
-        height: 300vh;
-        width: 100%;
-    }
-
     #FlatSkyBG {
-        min-height: 3200px;
+        min-height: 3300px;
     }
 
     #FlatSkyCloud {
-        min-height: 3200px;
+        min-height: 3100px;
         background-size: 25%;
+    }
+
+    .BigTitleBox {
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    #Band {
+        height: 130px;
     }
 }
 /* ------------------------------------------------------------- */
@@ -259,13 +279,6 @@
         width: 120%;
         transform: translateX(-10%);
         z-index: 1;
-    }
-
-    #BGAfterBackground {
-        top: -50vw;
-        width: 100%;
-        height: 250vh;
-        max-height: 2700px;
     }
 
     #FlatSkyBG {

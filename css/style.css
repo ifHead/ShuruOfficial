@@ -128,7 +128,7 @@ body {
 
 #CloudLineContainer {
   position: absolute;
-  border:red solid 3px;
+  top: 100vh;
   width: 100vw;
   z-index: 31;
 }
@@ -144,7 +144,7 @@ body {
   width: 100vw;
   height: 270vh;
   max-height: 2000px;
-  top: -50vw;
+  transform: translateY(-50vw);
   background: linear-gradient(180deg,
     rgba(105, 187, 249, 1) 0%,
     rgba(105, 187, 249, 1) 40%,
@@ -256,7 +256,7 @@ h1 {
 #StructureContainer {
   position: relative;
   width: 100vw;
-  left: 15%;
+  left: 20%;
   margin: 0;
   z-index: 12;
   height: 60vw;
@@ -264,7 +264,6 @@ h1 {
 
 #Structure_1 {
   position: absolute;
-  top: 0px;
   opacity: 1;
   width: 100vw;
   height: 60vw;
@@ -321,7 +320,7 @@ h1 {
 
 #CorpDemo {
   position: absolute;
-  width: 35%;
+  width: 45%;
   height: 190vw;
   left: -10%;
   z-index: 12;
@@ -339,11 +338,11 @@ h1 {
 /*---neumorphism button----------------------------------------*/
 /*----------------------------------------------------*/
 div.circle {
-  top: 30px;
+  /* top: 30px; */
   position: relative;
   display: flex;
-  width: 150px;
-  height: 150px;
+  width: 33vw;
+  height: 33vw;
   border-radius: 50px;
   align-items: center;
   justify-content: center;
@@ -356,8 +355,8 @@ div.circle:before {
   bottom: 0;
   left: 0;
   display: block;
-  width: 350px;
-  height: 350px;
+  width: 33vw;
+  height: 33vw;
   content: " ";
   transition: 0.3s ease-out;
   border-radius: 50px;
@@ -367,7 +366,7 @@ div.circle:before {
 
 div.circle:hover:before {
   box-shadow: 5px 5px 15px #a9a8b7, 5px 5px 15px #fff,
-  inset -3px -3px 10px #fff,inset 1px 1px 3px #c0c0c7;
+    inset -3px -3px 10px #fff, inset 1px 1px 3px #c0c0c7;
   transition: 0.1s ease-in;
 }
 
@@ -381,13 +380,11 @@ div.circle p {
   position: relative;
   z-index: 5;
   user-select: none;
-  cursor: pointer;
 }
-
 /*---------------------------------------------------*/
 /*---glass email form-------------------------------*/
 /*---------------------------------------------------*/
-.card {
+.mail {
   position: absolute;
   top: 450px;
   left: 50%;
@@ -532,13 +529,102 @@ div.circle p {
   inset 0px 1em 1em rgb(255, 255, 255);
 }
 
-.TitleBox {
+.BigTitleBox {
+  font-family: 'Pretendard Variable';
+  word-break: keep-all;
+  position: relative;
+  font-weight: 700;
+  /* line-height: 0.3em; */
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 25vh;
+  padding: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  font-size: 5vw;
+  color: rgb(72, 72, 136);
+  z-index: 1;
+}
+
+.TitleBox1 {
+  position : relative;
   font-family: 'Pretendard Variable';
   font-weight: 700;
   text-align: center;
+  margin-top: 50vh;
   padding: 1em;
-  font-size: 2em;
-  position : relative;
-  width: 50%;
+  font-size: 2.2vw;
+  width: 60%;
+  max-width: 30vw;
   color: rgb(72, 72, 136);
+}
+
+.TitleBox2 {
+  position: relative;
+  font-family: 'Pretendard Variable';
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  padding: 1em;
+  font-size: 2.4vw;
+  width: 70%;
+  max-width: 30vw;
+  color: rgb(72, 72, 136);
+}
+
+.TitleBox3 {
+  font-family: 'Pretendard Variable';
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  padding: 1em;
+  font-size: 3vw;
+  position: relative;
+  width: 70%;
+  max-width: 32vw;
+  color: rgb(72, 72, 136);
+}
+
+.TitleBox4 {
+  font-family: 'Pretendard Variable';
+  font-weight: 700;
+  text-align: center;
+  top: 40%;
+  padding: 1em;
+  font-size: 3vw;
+  position: relative;
+  width: 50%;
+  max-width: 30vw;
+  color: rgb(72, 72, 136);
+}
+
+#Band {
+  margin-top: 10vh;
+  display: flex;
+  transform: translateX(-100%);
+  margin-bottom: 15vh;
+  /* background-color: #ffdb01 */
+}
+
+#ShuPush {
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  height: 100%;
+}
+
+#GrowText{
+  position: relative;
+  float: left;
+  height: 100%;
+  vertical-align: middle;
+  z-index: -1;
+  color:#0066b5
+}
+
+#Cards {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
