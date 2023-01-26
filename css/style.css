@@ -321,7 +321,7 @@ h1 {
 #CorpDemo {
   position: absolute;
   width: 45%;
-  height: 190vw;
+  height: 120vw;
   left: -10%;
   z-index: 12;
   top:0;
@@ -338,7 +338,6 @@ h1 {
 /*---neumorphism button----------------------------------------*/
 /*----------------------------------------------------*/
 div.circle {
-  /* top: 30px; */
   position: relative;
   display: flex;
   width: 33vw;
@@ -350,18 +349,18 @@ div.circle {
 
 div.circle:before {
   position: absolute;
-  top: 10%;
-  right: 10%;
-  bottom: 10%;
-  left: 10%;
+  top: 5%;
+  right: 0;
+  bottom: 0;
+  left: 5%;
   display: block;
   width: 33vw;
   height: 33vw;
   content: " ";
-  transition: 0.3s ease-out;
+  transition: 0.1s ease-out;
   border-radius: 50px;
   filter: blur(5px);
-  box-shadow: 8px 8px 35px #9493a3, -8px -8px 35px #fff;
+  box-shadow: 18px 18px 35px #9493a3, -8px -8px 35px #fff;
 }
 
 div.circle:hover:before {
@@ -699,5 +698,14 @@ div.circle p {
   height: 15vh;
   max-height: 20vw;
   left: 80vw;
+  z-index: 3;
+}
+
+#GiantFall {
+  position: absolute;
+  top: -50vw;
+  height: 50vw;
+  left: 10%;
+  filter: blur(15px);
   z-index: 3;
 }
