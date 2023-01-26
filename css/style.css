@@ -130,7 +130,7 @@ body {
   position: absolute;
   top: 100vh;
   width: 100vw;
-  z-index: 31;
+  z-index: 3;
 }
 
 #CloudLine {
@@ -143,7 +143,7 @@ body {
   position: relative;
   width: 100vw;
   height: 270vh;
-  max-height: 2000px;
+  max-height: 3000px;
   transform: translateY(-50vw);
   background: linear-gradient(180deg,
     rgba(105, 187, 249, 1) 0%,
@@ -211,6 +211,10 @@ body {
   height: 800px;
 }
 
+#Cards {
+  height: 40vw;
+}
+
 /*--------------------------------------*/
 /*------Chars---------------------------*/
 /*--------------------------------------*/
@@ -255,15 +259,18 @@ h1 {
 
 #StructureContainer {
   position: relative;
+  padding:0;
   width: 100vw;
   left: 20%;
   margin: 0;
   z-index: 12;
-  height: 60vw;
+  margin-bottom: 25vh;
+  height: 180vw;
 }
 
 #Structure_1 {
   position: absolute;
+  top: 0px;
   opacity: 1;
   width: 100vw;
   height: 60vw;
@@ -297,34 +304,13 @@ h1 {
   background-repeat: no-repeat;
 }
 
-#StructureTrigger_1 {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 65vw;
-}
-
-#StructureTrigger_2 {
-  position: absolute;
-  top: 60vw;
-  width: 100vw;
-  height: 65vw;
-}
-
-#StructureTrigger_3 {
-  position: absolute;
-  top: 120vw;
-  width: 100vw;
-  height: 65vw;
-}
-
 #CorpDemo {
   position: absolute;
+  top: 0;
   width: 45%;
-  height: 190vw;
+  height: 60vw;
   left: -10%;
   z-index: 12;
-  top:0;
 }
 
 #CorpDemoContent {
@@ -337,50 +323,34 @@ h1 {
 /*---------------------------------------------------*/
 /*---neumorphism button----------------------------------------*/
 /*----------------------------------------------------*/
-div.circle {
-  /* top: 30px; */
+button.ClayButton {
   position: relative;
-  display: flex;
-  width: 33vw;
-  height: 33vw;
-  border-radius: 50px;
-  align-items: center;
-  justify-content: center;
-}
-
-div.circle:before {
-  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 33vw;
-  height: 33vw;
-  content: " ";
-  transition: 0.3s ease-out;
-  border-radius: 50px;
-  filter: blur(5px);
-  box-shadow: 8px 8px 35px #9493a3, -8px -8px 35px #fff;
+  margin-top: 20vw;
+  transform: translate(-50%, -50%);
+  border: 0;
+  font-size: 20px;
+  border-radius: 3vw;
+  background-color: #ffffff;
+  cursor: none;
+  box-shadow: 
+    2vw 2vw 3vw rgba(58, 143, 255, 0.15),
+    inset -0.3vw -0.3vw 1vw rgba(145, 193, 255, 0.55),
+    inset 0.4vw 0.4vw 1vw rgb(145, 193, 255, 0.02);
+  transition-duration: 0.5s;
 }
 
-div.circle:hover:before {
-  box-shadow: 5px 5px 15px #a9a8b7, 5px 5px 15px #fff,
-    inset -3px -3px 10px #fff, inset 1px 1px 3px #c0c0c7;
-  transition: 0.1s ease-in;
+button.ClayButton:hover {
+  cursor: none;
+  height: 22vw;
+  width: 16vw;
+  box-shadow: 
+    1vw 2vw 1vw rgba(58, 143, 255, 0.15),
+    inset -0.3vw -0.3vw 1vw rgba(145, 193, 255, 0.55),
+    inset 0.4vw 0.4vw 1vw rgb(145, 193, 255, 0.02);
+  transition-duration: 0.2s;
 }
 
-div.circle:active:before {
-  box-shadow: 0px 0px 0px #a9a8b7, 0px 0px 0px #fff,
-    inset -8px -8px 25px #fff, inset 8px 8px 25px #7c7b86;
-  transition: 0.05s ease-in;
-}
-
-div.circle p {
-  position: relative;
-  z-index: 5;
-  user-select: none;
-}
 /*---------------------------------------------------*/
 /*---glass email form-------------------------------*/
 /*---------------------------------------------------*/
@@ -522,7 +492,7 @@ div.circle p {
 
 .Clay {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 1.5em;
   box-shadow: 1em 1em 1em rgba(58, 143, 255, 0.15), 
   inset -0.2em -0.3em 0.7em rgba(145, 193, 255, 0.55), 
@@ -552,7 +522,7 @@ div.circle p {
   font-family: 'Pretendard Variable';
   font-weight: 700;
   text-align: center;
-  margin-top: 50vh;
+  margin-top: 20%;
   padding: 1em;
   font-size: 2.2vw;
   width: 60%;
@@ -565,7 +535,7 @@ div.circle p {
   font-family: 'Pretendard Variable';
   font-weight: 700;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 5%;
   padding: 1em;
   font-size: 2.4vw;
   width: 70%;
@@ -577,7 +547,7 @@ div.circle p {
   font-family: 'Pretendard Variable';
   font-weight: 700;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 5%;
   padding: 1em;
   font-size: 3vw;
   position: relative;
@@ -600,9 +570,10 @@ div.circle p {
 }
 
 #Band {
+  position: relative;
   margin-top: 10vh;
   display: flex;
-  transform: translateX(-100%);
+  transform: translateX(-500%);
   margin-bottom: 15vh;
   /* background-color: #ffdb01 */
 }
@@ -618,13 +589,88 @@ div.circle p {
   position: relative;
   float: left;
   height: 100%;
-  vertical-align: middle;
   z-index: -1;
   color:#0066b5
 }
 
-#Cards {
-  position: relative;
-  height: 100vh;
+#AirPlane {
+  position: absolute;
+  top: 150vh;
+  left: 100vw;
+  height: 30vh;
+  max-height: 20vw;
+  z-index: 12;
+  opacity: 1;
+}
+
+#FallFrame {
+  position: absolute;
   width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: blue;
+}
+
+#Fall1 {
+  position: absolute;
+  top: -20vh;
+  height: 20vh;
+  max-height: 20vw;
+  left: 10vw;
+  z-index: 3;
+}
+
+#Fall2 {
+  position: absolute;
+  top: -40vh;
+  height: 40vh;
+  max-height: 20vw;
+  left: 15vw;
+  z-index: 3;
+}
+
+#Fall3 {
+  position: absolute;
+  top: -20vh;
+  height: 17vh;
+  max-height: 20vw;
+  left: 40vw;
+  z-index: 3;
+}
+
+#Fall4 {
+  position: absolute;
+  top: -40vh;
+  height: 40vh;
+  max-height: 30vw;
+  left: 55vw;
+  z-index: 3;
+}
+
+#Fall5 {
+  position: absolute;
+  top: -20vh;
+  height: 18vh;
+  max-height: 20vw;
+  left: 65vw;
+  z-index: 3;
+}
+
+#Fall6 {
+  position: absolute;
+  top: -20vh;
+  height: 15vh;
+  max-height: 20vw;
+  left: 80vw;
+  z-index: 3;
+}
+
+#GiantFall {
+  position: absolute;
+  top: -50vw;
+  height: 50vw;
+  left: 10%;
+  filter: blur(15px);
+  z-index: 3;
 }

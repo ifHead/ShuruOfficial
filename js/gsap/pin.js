@@ -5,8 +5,19 @@ let smoother = ScrollSmoother.create({
     smooth: 1.3,
 });
 
-let tl = gsap.timeline();
+gsap.to("#AirPlane", {
+    scrollTrigger: {
+        trigger: "#AirPlane",
+        start: "top bottom",
+        toggleActions: "play none resume reset"
+    },
+    x: -window.innerWidth * 1.4,
+    y: window.innerHeight,
+    duration: 3,
+    ease: "slow(0.5, 0.5, false)"
+})
 
+let tl = gsap.timeline();
 window.addEventListener("resize", () => {
     if (window.RT) clearTimeout(window.RT);
     window.RT = setTimeout(function () {
@@ -14,79 +25,112 @@ window.addEventListener("resize", () => {
     }, 200);
 });
 
-tl
-.to("#Structure_1", {
+
+gsap.to("#CorpDemo", {
     scrollTrigger: {
-        trigger: "#StructureTrigger_1",
+        trigger: "#StructureContainer",
         start: "top+=" + window.innerWidth * 0.3 + " center",
-        end: "bottom+=" + window.innerWidth + " top",
-        pin: "#StructureContainer",
+        end: "bottom bottom",
+        pin: "#CorpDemo",
+    },
+})
+
+gsap.to("#CorpDemo", {
+    scrollTrigger: {
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth + " center",
+        toggleActions: "play none none reverse"
+    },
+    opacity: 0,
+    duration: 1,
+})
+
+gsap.to("#Structure_1", {
+    scrollTrigger: {
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.3 + " center",
+        end: "bottom bottom",
+        pin: "#Structure_1",
         scrub: true,
         markers: true,
     },
 })
-.to("#Structure_2", {
+
+gsap.to("#Structure_2", {
     scrollTrigger: {
-        trigger: "#StructureTrigger_2",
-        start: "top-=" + window.innerWidth * 0.3 + "center",
-        end: "top top",
-        // pin: "#StructureContainer",
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.3 + " center",
+        end: "bottom bottom",
+        pin: "#Structure_2",
+        scrub: true,
+    }
+})
+
+gsap.to("#Structure_2", {
+    scrollTrigger: {
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.5 + " center",
+        end: "top+=" + window.innerWidth * 0.5 + " center-=" + window.innerWidth * 0.3,
         scrub: true,
         markers: true,
     },
     opacity: 1
 })
-.to("#Structure_3", {
+
+gsap.to("#Structure_3", {
     scrollTrigger: {
-        trigger: "#StructureTrigger_3",
-        start: "top-=" + window.innerWidth * 0.3 + " center",
-        end: "bottom-=" + window.innerWidth * 0.3 + " top",
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.3 + " center",
+        end: "bottom bottom",
+        pin: "#Structure_3",
+    }
+})
+
+gsap.to("#Structure_3", {
+    scrollTrigger: {
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.8 + " center",
+        end: "top+=" + window.innerWidth * 0.8 + " center-=" + window.innerWidth * 0.3,
         scrub: true,
         markers: true,
     },
     opacity: 1
 })
-.to("#CorpDemo", {
+
+gsap.from(".TitleBox1", {
     scrollTrigger: {
-        trigger: "#StructureTrigger_1",
-        start: "top+=" + window.innerWidth * 0.3 + " center ",
-        end: "bottom+=" + window.innerWidth + " top",
-        scrub: true,
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.3 + " center",
+        toggleActions: "play pause resume reverse"
     },
-    y: window.innerWidth / innerHeight > 1 ? -window.innerWidth * 0.6 : -window.innerWidth * 1.2,
+    opacity: 0,
+    x: -window.innerWidth / 3,
+    duration: 2,
+    ease: "elastic.out(1, 0.6)"
 })
-.from(".TitleBox1", {
+
+gsap.from(".TitleBox2", {
     scrollTrigger: {
-        trigger: "#StructureTrigger_1",
-        start: "top+=" + window.innerHeight * 0.1 + " bottom",
-        end: "center center+=" + window.innerHeight * 0.15,
-        scrub: true,
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.3 + " center",
+        toggleActions: "play pause resume reverse"
     },
-    opacity: -1.5,
-    y: -window.innerHeight * 2,
-    x: -window.innerWidth * 0.7
+    opacity: 0,
+    x: -window.innerWidth / 3,
+    duration: 2.5,
+    ease: "elastic.out(1, 0.6)"
 })
-.from(".TitleBox2", {
+
+gsap.from(".TitleBox3", {
     scrollTrigger: {
-        trigger: "#StructureTrigger_1",
-        start: "top+="+window.innerHeight*0.2 +" bottom",
-        end: "center center",
-        scrub: true,
+        trigger: "#StructureContainer",
+        start: "top+=" + window.innerWidth * 0.3 + " center",
+        toggleActions: "play pause resume reverse"
     },
-    opacity: -1.5,
-    y: -window.innerHeight * 2,
-    x: -window.innerWidth
-})
-.from(".TitleBox3", {
-    scrollTrigger: {
-        trigger: "#StructureTrigger_1",
-        start: "top+=" + window.innerHeight * 0.3 + " bottom",
-        end: "center center-=" + window.innerHeight * 0.15,
-        scrub: true,
-    },
-    opacity: -1.5,
-    y: -window.innerHeight,
-    x: -window.innerWidth
+    opacity: 0,
+    x: -window.innerWidth / 3,
+    duration: 3,
+    ease: "elastic.out(1, 0.55)"
 })
 
 let tlse = gsap.timeline();
@@ -109,51 +153,14 @@ tlse
     y: -300,
     opacity: 0.5,
     duration: 2
-});
+})
 
 gsap.to("#Band", {
     scrollTrigger: {
         trigger: "#Band",
         start: "top bottom",
-        toggleActions: 'restart none none none',
-        once: false,
-        markers: true
+        toggleActions: 'play pause resume reset'
     },
     x: 0,
     duration: 120
 })
-// .from("ShuPush"){
-
-// }
-
-// .to("#Structure_3", {
-//     scrollTrigger: {
-//         trigger: "#StructureTrigger_3",
-//         start: "top+=" + window.innerHeight / 4 + " center",
-//         pin: "#StructureContainer",
-//         scrub: true,
-//         markers: true,
-//     },
-//     opacity: 1
-// })
-
-// // // ScrollTrigger.create({
-// // //     animation: tl,
-// // //     trigger: "#StructureContainer",
-// // //     start: "top top",
-// // //     markers: true,
-// // //     scrub: true,
-// // //     pin: true,
-// // // });
-
-// // // let scrollTopVal = 0;
-
-// // // window.addEventListener('scroll', function (e) {
-// // //     scrollTopVal = window.scrollY;
-// // //     bodyScrollBar.scrollTop = window.scrollY;
-// // // }
-
-// // // ScrollTrigger.scrollerProxy(document.body, {
-// // // })
-
-// // // bodyScrollBar.addListener(ScrollTrigger.update);

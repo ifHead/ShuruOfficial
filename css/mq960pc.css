@@ -65,6 +65,20 @@
     #Band {
         height: 60px;
     }
+
+    #Cards {
+        height: 40vw;
+    }
+
+    button.ClayButton {
+        height: 37vw;
+        width: 28vw;
+    }
+
+    button.ClayButton:Hover {
+        height: 30vw;
+        width: 26vw;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width:1320px){
@@ -115,6 +129,16 @@
     #Band {
         height: 80px;
     }
+
+    button.ClayButton {
+        height: 32vw;
+        width: 22vw;
+    }
+
+    button.ClayButton:Hover {
+        height: 30vw;
+        width: 20vw;
+    }
 }
 /* ------------------------------------------------------------- */
 /* ------------------------------------------------------------- */
@@ -150,6 +174,16 @@
 
     #Band {
         height: 100px;
+    }
+
+    button.ClayButton {
+        height: 32vw;
+        width: 22vw;
+    }
+
+    button.ClayButton:Hover {
+        height: 30vw;
+        width: 20vw;
     }
 }
 /* ------------------------------------------------------------- */
