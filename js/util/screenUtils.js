@@ -35,7 +35,4 @@ function scrollgo(e) {
     }
 }
 
-
-
-
 $("html, body").addClass("not_scroll"); // 스크롤 불가능 (position fixed 이용)

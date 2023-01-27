@@ -63,21 +63,9 @@
     }
 
     #Band {
+        margin-top: 0;
         height: 60px;
-    }
-
-    #Cards {
-        height: 40vw;
-    }
-
-    button.ClayButton {
-        height: 37vw;
-        width: 28vw;
-    }
-
-    button.ClayButton:Hover {
-        height: 30vw;
-        width: 26vw;
+        margin-bottom: 0;
     }
 }
 
@@ -129,16 +117,6 @@
     #Band {
         height: 80px;
     }
-
-    button.ClayButton {
-        height: 32vw;
-        width: 22vw;
-    }
-
-    button.ClayButton:Hover {
-        height: 30vw;
-        width: 20vw;
-    }
 }
 /* ------------------------------------------------------------- */
 /* ------------------------------------------------------------- */
@@ -174,16 +152,6 @@
 
     #Band {
         height: 100px;
-    }
-
-    button.ClayButton {
-        height: 32vw;
-        width: 22vw;
-    }
-
-    button.ClayButton:Hover {
-        height: 30vw;
-        width: 20vw;
     }
 }
 /* ------------------------------------------------------------- */

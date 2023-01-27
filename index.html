@@ -120,24 +120,46 @@
 </div>
 
 <div id="Cards">
-  <div><button class="ClayButton">1</button></div>
-  <div><button class="ClayButton">2</button></div>
-  <div><button class="ClayButton">3</button></div>
-  <div><button class="ClayButton">4</button></div>
-  <div><button class="ClayButton">5</button></div>
-  <div><button class="ClayButton">6</button></div>
-  <div><button class="ClayButton">7</button></div>
-  <div><button class="ClayButton">8</button></div>
-  <div><button class="ClayButton">9</button></div>
-  <div><button class="ClayButton">10</button></div>
-  <div><button class="ClayButton">11</button></div>
-  <div><button class="ClayButton">12</button></div>
-  <div><button class="ClayButton">13</button></div>
-  <div><button class="ClayButton">14</button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/1.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/2.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/3.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/4.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/5.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/6.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/7.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/8.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/9.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/10.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/11.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/12.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/13.png"></button></div>
+  <div><button class="ClayButton"><img class="Tem" src="/Image/RCorp/Idle/14.png"></button></div>
 </div>
 
+<!-- 이미지 변경 데모 -->
+<button class="SlotButton" onclick="toggleImg()">
+  <img id="SlotImg" src="/Image/AnimatedShu/SlotSleep.png"/>
+</button>
+  
+<script>
+  let isSlotRunning = false;
+  function toggleImg() {
+    if(!isSlotRunning)
+    {
+      document.getElementById("SlotImg").src = "/Image/AnimatedShu/Slot.png";
+      isSlotRunning = true;
+      setTimeout(
+        function () { 
+          document.getElementById("SlotImg").src = "/Image/AnimatedShu/SlotSleep.png"; 
+          isSlotRunning = false;
+        }, 2300
+      );
+    }
+  }
+</script>
+<!-- 이미지 변경 데모 끝-->
+
 <div id="Section" style="background:white; height: 15vh; max-height: 300px; min-height: 100px;"></div>
-<div id="Section" style="background:yellow; height: 50vh;">여기는 뽑기 하는 곳</div>
 <div id="Section" style="background:black; height: 150vh; color:white;">여기는 컨택트 폼</div>
 
 <!-- <div class="card">
@@ -173,17 +195,6 @@
 <!-- <script src="js/p5/ShuruJump/shuruJump.js"></script> -->
 <!-- <script src="/js/util/gotoTopAndFix.js"></script> -->
 
-
-<!-- 이미지 변경 데모 -->
-<!-- <button onclick="toggleImg()">toggle</button>
-  <img id="img" src="/Icon/Favicon/favicon-144x144.png" />
-  <script>
-    function toggleImg() {
-      document.getElementById("img").src = "/Icon/Favicon/index_mv_bird.png";
-  setTimeout(function () { document.getElementById("img").src = "/Icon/Favicon/favicon-144x144.png"; }, 1000);
-}
-</script> -->
-<!-- 이미지 변경 데모 끝-->
 <div class="container2">
   <h1>&nbsp;
     <span class="auto-text" style="z-index: index 1000; color:white;"></span>
@@ -191,8 +202,6 @@
 </div>
 
 <script src="/js/util/mouseInfo.js"></script>
-
-
 <script src="/js/util/slightFollow.js"></script>
 
 <!-- Include JS Script and import 'typed.js' as module-->
