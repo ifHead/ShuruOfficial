@@ -377,13 +377,13 @@ button.ClayButton:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
 }
 /*---------------------------------------------------*/
 /*---glass email form-------------------------------*/
 /*---------------------------------------------------*/
-.mail {
+.mail { 
   position: absolute;
   top: 450px;
   left: 50%;

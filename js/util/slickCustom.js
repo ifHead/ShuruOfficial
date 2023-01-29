@@ -1,13 +1,13 @@
 $('#Cards').slick({
     dots: true,
     infinite: true,
-    speed: 400,
+    speed: 600,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 800,
+    autoplaySpeed: 1600,
     pauseOnFocus: false,
-    pauseOnDotsHover: true,
-    pauseOnHover: true,
+    pauseOnDotsHover: false,
+    pauseOnHover: false,
     swipeToSlide: true,
 });
