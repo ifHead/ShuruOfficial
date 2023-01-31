@@ -411,6 +411,7 @@ button.slotbutton {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
   width: 100%;
   opacity: 1;
   transition-duration: 1s;
@@ -438,11 +439,15 @@ button.slotbutton {
     color: rgb(126, 164, 212);
     font-size: 20px;
     margin-bottom: 30vw;
+=======
+  width: 70%;
+  height: 70%;
+>>>>>>> aefdad78ac551e21415135d71086c18b335b6677
 }
 /*---------------------------------------------------*/
 /*---glass email form-------------------------------*/
 /*---------------------------------------------------*/
-.mail {
+.mail { 
   position: absolute;
   top: 450px;
   left: 50%;
