@@ -17,7 +17,6 @@ gsap.to("#AirPlane", {
     ease: "slow(0.5, 0.5, false)"
 })
 
-let tl = gsap.timeline();
 window.addEventListener("resize", () => {
     if (window.RT) clearTimeout(window.RT);
     window.RT = setTimeout(function () {
@@ -42,7 +41,7 @@ gsap.to("#CorpDemo", {
         toggleActions: "play none none reverse"
     },
     opacity: 0,
-    duration: 1,
+    duration: 0.2,
 })
 
 gsap.to("#Structure_1", {
@@ -143,24 +142,59 @@ tlse
         scrub: true
     },
     y: -window.innerHeight * 2.2
-})
-.from(".BigTitleBox", {
+});
+
+gsap.to(".BigTitleBox", {
     scrollTrigger: {
         trigger: ".BigTitleBox",
-        start: "top bottom-=" + window.innerHeight * 0.1,
-        scrub: true
+        start: "top bottom"
     },
-    y: -300,
-    opacity: 0.5,
-    duration: 2
+    y: -150,
+    opacity: 1,
+    duration: 1,
+    ease: "power4.out"
 })
 
-gsap.to("#Band", {
-    scrollTrigger: {
-        trigger: "#Band",
-        start: "top bottom",
-        toggleActions: 'play pause resume reset'
+let tlk = gsap.timeline();
+
+tlk.fromTo("#band-1",
+    {
+        x: -window.innerWidth * 8
     },
-    x: 0,
-    duration: 120
+    {
+        x: 0,
+        duration: 80,
+        ease: "slow(0.01, 0.01, false)"
+    }
+)
+.fromTo("#band-2", 
+    {
+        x: -window.innerWidth * 8
+    }, 
+    {
+        x: 0,
+        duration: 80,
+        ease: "slow(0.01, 0.01, false)"
+    }, 
+    "<"
+);
+
+let slotPopupAnimTimeline = gsap.timeline(); 
+
+slotPopupAnimTimeline.from("#slot-popup", {
+    y: window.innerHeight * 0.3,
+    duration: 1,
+    opacity: 0,
+    width: 0,
+    height: 0,
+    ease: "power2.in",
 })
+.to("#slot-img", {
+    opacity: 0,
+    duration: 1,
+    ease: "power3.in"
+}, "<+=0.3");
+slotPopupAnimTimeline.pause();
+
+
+tlk.repeat(-1);

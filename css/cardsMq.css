@@ -1,0 +1,116 @@
+@media all and (max-width:599px) {
+    #cards {
+        top: -50vw;
+        height: 0vw;
+    }
+
+    .ClayButton {
+        top: 25vw;
+        height: 40vw;
+        width: 40vw;
+        border-radius: 15vw;
+        margin-bottom: 7vw;
+        box-shadow:
+            inset -0.3vw -0.3vw 4vw rgba(145, 193, 255, 0.5),
+            inset 0.3vw 0.3vw 4vw rgb(145, 193, 255, 0.02);
+    }
+
+    .ClayButton:hover {
+        height: 45vw;
+        width: 45vw;
+        border-radius: 15vw;
+        margin-bottom: 2vw;
+        box-shadow:
+            inset -0.3vw -0.3vw 4vw rgba(145, 193, 255, 0.5),
+            inset 0.3vw 0.3vw 4vw rgb(145, 193, 255, 0.02);        
+    }
+
+    #band-1 {
+        top: -50vw;
+        height: 8vw;
+    }
+
+    #band-2 {
+        top: 47vw;
+        height: 8vw;
+        margin-bottom: 70vw;
+    }
+}
+
+@media all and (min-width:600px) and (max-width:999px) {
+    #cards {
+        top: -10vw;
+        height: 58vw;
+    }
+
+    .ClayButton {
+        top: 15vw;
+        height: 25vw;
+        width: 25vw;
+        margin-bottom: 4vw;
+        margin-top: 0vw;
+        border-radius: 11vw;
+        box-shadow:
+            inset -0.3vw -0.3vw 2vw rgba(145, 193, 255, 0.5),
+            inset 0.3vw 0.3vw 2vw rgb(145, 193, 255, 0.02);
+    }
+
+    .ClayButton:hover {
+        height: 28vw;
+        width: 28vw;
+        margin-bottom: 1vw;
+        border-radius: 11vw;
+        box-shadow:
+            inset -0.3vw -0.3vw 2vw rgba(145, 193, 255, 0.5),
+            inset 0.3vw 0.3vw 2vw rgb(145, 193, 255, 0.02);
+    }
+
+    #band-1 {
+        height: 6vw;
+        top: -10vw;
+    }
+
+    #band-2 {
+        height: 6vw;
+        top: -9vw;
+        margin-bottom: 0vw;
+    }
+}
+
+@media all and (min-width:1000px) and (max-width:1359px) {
+    #cards {
+        height: 48vw;
+        margin-bottom: 0vw;
+    }
+
+    .ClayButton {
+        border-radius: 9vw;
+        top: 12vw;
+        height: 22vw;
+        width: 22vw;
+        margin-bottom: 2vw;
+        margin-top: 1vw;
+        box-shadow:
+            inset -0.3vw -0.3vw 2vw rgba(145, 193, 255, 0.6),
+            inset 0.3vw 0.3vw 2vw rgb(145, 193, 255, 0.02);
+    }
+
+    .ClayButton:hover {
+        height: 24vw;
+        width: 24vw;
+        margin-bottom: 0vw;
+
+        box-shadow:
+            inset -0.3vw -0.3vw 2vw rgba(145, 193, 255, 0.5),
+            inset 0.3vw 0.3vw 2vw rgb(145, 193, 255, 0.02);
+    }
+
+    #band-1 {
+        top: 0vw;
+    }
+
+    #band-2 {
+        top: 3vw;
+        margin-bottom: 5vw;
+    }
+}
