@@ -1,25 +1,48 @@
-let tlsk = gsap.timeline();
+// let tlsk = gsap.timeline();
 
-tlsk
-.to("#Logo3D",{
-    y: 20,
-    duration: 2,
-    ease: "power1.out"
-})
-.to("#Logo3D",{
-    y: 0,
-    duration: 2,
-    ease: "power1.in"
-})
-.to("#LogoDeco", {
-    y: -35,
-    duration: 2,
-    ease: "power1.out"
-},"-=4")
-.to("#LogoDeco", {
-    y: 0,
-    duration: 2,
-    ease: "power1.in"
-},"-=2");
+// tlsk
+// .fromTo("#Logo3D",
+//     {
+//         y: 0,
+//     },
+//     {
+//         y: 25,
+//         duration: 2,
+//         ease: "sine.out"
+//     }
+// )
+// .fromTo("#Logo3D",
+//     {
+//         y: 25,
+//     },
+//     {
+//         y: 0,
+//         duration: 2,
+//         ease: "sine.out"
+//     }
+// )
+// .fromTo("#LogoDeco",
+//     {
+//         y: 0,
+//     },
+//     {
+//         y: 45,
+//         duration: 2,
+//         ease: "sine.out"
+//     },
+//     "-=4"
+// )
+// .fromTo("#LogoDeco",
+//     {
+//         y: 45,
+//     },
+//     {
+//         y: 0,
+//         duration: 2,
+//         ease: "sine.out"
+//     },
+//     "-=2"
+// );
 
-tlsk.repeat(-1);
+// tlsk.repeat(-1);
+

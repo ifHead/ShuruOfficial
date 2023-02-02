@@ -78,6 +78,26 @@ body {
   padding: 0px;
 }
 
+#sky-bg-below{
+  position: relative;
+  background: rgb(17, 19, 64);
+  width: 100vw;
+  height: 150vh;
+  min-height: 1000px;
+  z-index: -1;
+}
+
+#main-fg-below {
+  position: absolute;
+  transform-origin: 0 0;
+  rotate: 20deg;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 160vw;
+  z-index: -3;
+}
+
 #SkyBG{
   position: absolute;
   margin: 0px;
@@ -102,7 +122,7 @@ body {
   background-repeat: repeat;
   background-size: 40%;
   width: 100%;
-  height: 130vh;
+  height: 200vh;
   z-index: 0;
 }
 
@@ -125,6 +145,33 @@ body {
   width: 100%;
   min-width: 300px;
   background-size: 100%;
+}
+
+#cloudline-below {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+}
+
+#skyline-below{
+  position: relative;
+  margin-top: -40vw;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  rotate: 180deg;
+}
+
+#spec-fg-below {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: URL("/Image/animatedStars.png");
+  background-repeat: repeat;
+  background-size: 40%;
+  width: 100%;
+  height: 230vh;
+  z-index: -2;
 }
 
 #CloudLineContainer {
@@ -328,10 +375,11 @@ h1 {
 button.slotbutton {
   position: relative;
   margin-top: 10vh;
+  margin-bottom: 80vh;
   width: 100vw;
-  height: 85vh;
-  background: none;
-  border: none;
+  height: 86vh;
+  background: none !important; 
+  border: none !important;
 }
 
 #slot-img {
@@ -341,6 +389,7 @@ button.slotbutton {
   width: 26%;
   max-width: 30vh;
   transform: translate(-50%, -55%);
+  border: none;
 }
 
 #slot-popup {
@@ -354,13 +403,13 @@ button.slotbutton {
   top: 50%;
   margin-bottom: 2vw;
   transform: translate(-50%, -50%);
-  border: 0;
+  border: none;
   font-size: 20px;
   border-radius: 15vh;
   background-color: #ffffff;
   cursor: none;
   box-shadow:
-    2vw 2vw 2vw rgba(145, 193, 255, 0.2),
+    1vw 1vw 2vw rgba(145, 193, 255, 0.2),
     inset -0.3vw -0.3vw 3vw rgba(145, 193, 255, 0.6);
   transition-duration: 1s;
 }
@@ -382,7 +431,7 @@ button.slotbutton {
   background-color: #ffffff;
   cursor: none;
   box-shadow:
-      inset -0.3vw -0.3vw 1vw rgba(145, 193, 255, 0.55);
+    inset -0.3vw -0.3vw 1vw rgba(145, 193, 255, 0.55);
   transition-duration: 1s;
 }
 
@@ -393,7 +442,7 @@ button.slotbutton {
   margin-bottom: 0vw;
 
   box-shadow:
-      inset -0.3vw -0.3vw 1vw rgba(145, 193, 255, 0.55);
+    inset -0.3vw -0.3vw 1vw rgba(145, 193, 255, 0.55);
   transition-duration: 0.3s;
 }
 
@@ -438,140 +487,6 @@ button.slotbutton {
     color: rgb(126, 164, 212);
     font-size: 20px;
     margin-bottom: 30vw;
-}
-/*---------------------------------------------------*/
-/*---glass email form-------------------------------*/
-/*---------------------------------------------------*/
-.mail { 
-  position: absolute;
-  top: 450px;
-  left: 50%;
-  width: 40%;
-  height: 540px;
-  min-width: 320px;
-  transform: translate(-50%, -50%);
-  backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(300deg,
-      rgba(69, 69, 80, 0.568),
-      #cec9ee3d);
-  box-shadow:
-    inset 0.1em 0.1em 0.2em 0 rgba(217, 216, 235, 0.1),
-    inset -0.1em -0.1em 0.2em 0 rgba(6, 14, 44, 0.2);
-  border-radius: 30px;
-  z-index: 1000;
-}
-
-@keyframes animate {
-  0%,
-  100% {
-    transform: translateY(-40px);
-  }
-
-  50% {
-    transform: translateY(40px);
-  }
-}
-
-.form {
-  position: relative;
-  width: 100%;
-  height: 400px;
-}
-
-.form h2 {
-  position: relative;
-  color: rgb(233, 233, 233);
-  font-size: 2em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-  margin-top: 40px;
-
-  text-align: center;
-}
-
-.form .inputBx {
-  margin: 20px 40px 0px 40px;
-}
-
-.form .inputBx input {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  outline: none;
-  padding: 12px 20px 10px 20px;
-  border-radius: 10px;
-  border: 1px solid rgb(255, 255, 255, 0.1);
-  border-right: 1px solid rgb(1, 1, 1, 0.1);
-  border-bottom: 1px solid rgb(1, 1, 1, 0.1);
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #fff;
-  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.05);
-}
-
-.form .inputBx textarea {
-  width: 100%;
-  min-height: 200px;
-  height: 50%;
-  padding-top: 20px;
-  font-family: 'Pretendard Variable';
-  resize: none;
-  background: rgb(1, 1, 1, 0.1);
-  border: none;
-  outline: none;
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: 1px solid rgb(255, 255, 255, 0.15);
-  border-right: 1px solid rgb(1, 1, 1, 0.1);
-  border-bottom: 2px solid rgb(1, 1, 1, 0.1);
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #fff !important;
-  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.05);
-}
-
-.form .inputBx input::placeholder {
-  color: #fff;
-}
-
-.form .inputBx textarea::placeholder {
-  padding-top: 3px;
-  color: rgb(255, 255, 255);
-}
-
-.form .inputBx input[type="submit"] {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-  color: #fff;
-  max-width: 150px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  transition: .1s ease-in-out;
-}
-
-.form .inputBx input[type="submit"]:hover {
-  background: rgba(255, 255, 255, 0.3);
-  font-weight: 600;
-}
-
-.text {
-  margin-top: 5px;
-  color: #fff;
-}
-
-.text a {
-  margin-top: 5px;
-  color: #fff;
-}
-
-/* 구획 */
-#Section {
-  position: relative;
-  width: 100%;
 }
 
 /*-------------------------------*/
@@ -769,4 +684,114 @@ button.slotbutton {
   left: 10%;
   filter: blur(15px);
   z-index: 3;
+}
+
+/*----------------------------------*/
+/*------------footer----------------*/
+/*----------------------------------*/
+
+#footer {
+  position: absolute;
+  font-family: 'Pretendard Variable';
+  font-size: 15px;
+  color: lightgray;
+  top: 100%;
+  transform: translateY(-120px);
+  height: 150px;
+  width: 100vw;
+  word-break: break-all;
+  padding: 55px 0px 0px 0px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 11, 38, 0) 0%,
+    rgba(8, 8, 20, 0.3) 30%,
+    rgba(8, 8, 20, 0.6) 90%
+  );
+  z-index: -2;
+}
+
+#mail-container {
+  position: absolute;
+  display: block;
+  top: 62vh;
+  width: 40vh;
+  min-width: 400px;
+  max-width: 1200px;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 800;
+  left: 50vw;
+  transform: translateX(-50%);
+  z-index: -2;
+  border: 0;
+  font-size: 20px;
+  border-radius: 4vh;
+  background: rgb(245,245,245);
+  cursor: none;
+  box-shadow:
+    inset -0.5vw -0.5vw 1vw rgba(5, 45, 121, 0.55),
+    inset 0.5vw 0.5vw 1vw rgba(5, 45, 121, 0.2);
+}
+
+.mail-icon {
+  position: absolute;
+  opacity: 0.35;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  width: 8%;
+  height: 4%;
+  background: none;
+  border: 0;
+  transition-duration: 0.3s;
+}
+
+#mail-name {
+  position: relative; 
+  top: 18%; 
+  left: 50%;
+  height: 7%; 
+  width: 70%; 
+  border-radius: 15px;
+  transform: translate(-50%); 
+  color: black;
+  font-family: 'Pretendard Variable';
+  font-size: 10px;
+  background: rgb(245,245,245);
+  filter: blur(3px);
+  box-shadow:
+    inset -4px -4px 3px rgba(255, 255, 255, 1),
+    inset 3px 3px 3px rgba(55, 85, 135, 0.2),
+    -3px -3px 3px rgba(5, 45, 121, 0.1),
+    3px 3px 10px rgba(255, 255, 255, 0.5); 
+}
+
+#mail-addr {
+  position: relative;
+  top: 18%;
+  left: 50%;
+  height: 7%;
+  width: 70%;
+  border-radius: 15px;
+  transform: translate(-50%);
+  background: rgb(245, 245, 245);
+  filter: blur(3px);
+  box-shadow:
+    inset -4px -4px 3px rgba(255, 255, 255, 1),
+    inset 3px 3px 3px rgba(55, 85, 135, 0.2),
+    -3px -3px 3px rgba(5, 45, 121, 0.1),
+    3px 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.input-alignment[type=submit] {
+  position: relative;
+  background: none;
+  left: 50%;
+  width: 80vw;
+  height: 10vh;
+  transform: translateX(-50%);
+  top: 18%;
+  display: block;
+  z-index: 123;
 }

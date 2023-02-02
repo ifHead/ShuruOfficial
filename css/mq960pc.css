@@ -67,6 +67,10 @@
         height: 60px;
         margin-bottom: 0;
     }
+
+    #footer {
+        font-size: 12px;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width:1320px){
@@ -106,7 +110,6 @@
         width: 70%;
         transform: translate(-53%, -50%);
         top: 35vh;
-        
     } 
 
     .BigTitleBox {

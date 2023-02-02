@@ -21,6 +21,7 @@ window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 		let pressedCursor;
 		let releaseTimerOn = false;
 		let releaseTimer = 0;
+		let offset = 0;
 
 		a.preload = () => {
 			idleCursor = a.loadImage('/Image/IdleCursor.png');
@@ -38,44 +39,49 @@ window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 			if (releaseTimerOn) {
 				if (releaseTimer == 0) {
 					apng.play();
+					offset = 0;
+				}
+
+				if (releaseTimer > 5 && offset < 10) {
+					offset += 1;
 				}
 
 				releaseTimer++;
 
 				if (releaseTimer < 22 && releaseTimer > 1) {
-					releasedCursor.style.left = a.mouseX + "px";
-					releasedCursor.style.top = a.mouseY + "px";
+					releasedCursor.style.left = a.mouseX - 15 + offset + "px";
+					releasedCursor.style.top = a.mouseY - 15 + offset + "px";
 				}
 
 				if (isMousePressing && releaseTimer > 3) {
 					apng.rewind();
 					releaseTimer = 0;
 					releaseTimerOn = false;
-					a.image(idleCursor, a.mouseX, a.mouseY, 70, 70);
+					a.image(idleCursor, a.mouseX -15, a.mouseY -15, 70, 70);
 					releasedCursor.style.left = 99999 + "px";
 					releasedCursor.style.top = 99999 + "px";
 				}
 
 				if (releaseTimer <= 1) {
-					a.image(pressedCursor, a.mouseX, a.mouseY, 70, 70);
+					a.image(pressedCursor, a.mouseX - 15, a.mouseY - 15, 70, 70);
 				}
 
 				if (releaseTimer >= 22) {
 					apng.rewind();
 					releaseTimer = 0;
 					releaseTimerOn = false;
-					a.image(idleCursor, a.mouseX, a.mouseY, 70, 70);
+					a.image(idleCursor, a.mouseX - 15 + offset, a.mouseY - 15 + offset, 70, 70);
 					releasedCursor.style.left = 99999 + "px";
 					releasedCursor.style.top = 99999 + "px";
 				}
 			} else {
 				if (isMousePressing) {
-					a.image(pressedCursor, a.mouseX, a.mouseY, 70, 70);
+					a.image(pressedCursor, a.mouseX -15, a.mouseY -15, 70, 70);
 				} else if (isMouseReleased) {
 					releaseTimerOn = true;
-					a.image(pressedCursor, a.mouseX, a.mouseY, 70, 70);
+					a.image(pressedCursor, a.mouseX -15, a.mouseY -15, 70, 70);
 				} else {
-					a.image(idleCursor, a.mouseX, a.mouseY, 70, 70);
+					a.image(idleCursor, a.mouseX -5, a.mouseY -5, 70, 70);
 				}
 			}
 

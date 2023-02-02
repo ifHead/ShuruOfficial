@@ -18,12 +18,11 @@ gsap.to("#AirPlane", {
 })
 
 window.addEventListener("resize", () => {
+    this.location.reload(false); /* false to get page from cache */
     if (window.RT) clearTimeout(window.RT);
     window.RT = setTimeout(function () {
-        this.location.reload(false); /* false to get page from cache */
     }, 200);
 });
-
 
 gsap.to("#CorpDemo", {
     scrollTrigger: {
@@ -51,7 +50,6 @@ gsap.to("#Structure_1", {
         end: "bottom bottom",
         pin: "#Structure_1",
         scrub: true,
-        markers: true,
     },
 })
 
@@ -71,7 +69,6 @@ gsap.to("#Structure_2", {
         start: "top+=" + window.innerWidth * 0.5 + " center",
         end: "top+=" + window.innerWidth * 0.5 + " center-=" + window.innerWidth * 0.3,
         scrub: true,
-        markers: true,
     },
     opacity: 1
 })
@@ -91,7 +88,6 @@ gsap.to("#Structure_3", {
         start: "top+=" + window.innerWidth * 0.8 + " center",
         end: "top+=" + window.innerWidth * 0.8 + " center-=" + window.innerWidth * 0.3,
         scrub: true,
-        markers: true,
     },
     opacity: 1
 })
@@ -179,12 +175,16 @@ tlk.fromTo("#band-1",
     "<"
 );
 
+tlk.repeat(-1);
+
 let slotPopupAnimTimeline = gsap.timeline(); 
+slotPopupAnimTimeline.pause();
 
 slotPopupAnimTimeline.from("#slot-popup", {
     y: window.innerHeight * 0.3,
     duration: 1,
     opacity: 0,
+    border: 0,
     width: 0,
     height: 0,
     ease: "power2.in",
@@ -192,9 +192,21 @@ slotPopupAnimTimeline.from("#slot-popup", {
 .to("#slot-img", {
     opacity: 0,
     duration: 1,
+    border: 0,
     ease: "power3.in"
 }, "<+=0.3");
-slotPopupAnimTimeline.pause();
 
-
-tlk.repeat(-1);
+gsap.fromTo("#skyline-below", 
+    {
+        y: 0
+    }, 
+    {
+        y: window.innerHeight - window.innerWidth > 0 ? window.innerHeight - 200 * (window.innerHeight / window.innerWidth) : window.innerWidth * 1.2,
+        scrollTrigger: {
+            trigger: "#sky-bg-below",
+            start: "top-=100 bottom",
+            end: "top top",
+            scrub: true
+        }
+    }
+);
