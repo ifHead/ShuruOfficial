@@ -41,7 +41,6 @@ gsap.to("#Fall4", {
         trigger: "#SkyBG",
         start: "top+=" + innerHeight * 0.1 + " top",
         toggleActions: "play none none reset",
-        markers: true
     },
     y: window.innerHeight * 4,
     opacity: 0,
@@ -55,7 +54,6 @@ gsap.to("#Fall5", {
         trigger: "#SkyBG",
         start: "top+=" + innerHeight * 0.05 + " top",
         toggleActions: "play none none reset",
-        markers: true
     },
     y: window.innerHeight * 4,
     opacity: 0,
@@ -69,7 +67,6 @@ gsap.to("#Fall6", {
         trigger: "#SkyBG",
         start: "top+=" + innerHeight * 0.05 + " top",
         toggleActions: "play none none reset",
-        markers: true
     },
     y: window.innerHeight * 4,
     opacity: 0,
@@ -82,7 +79,6 @@ gsap.to("#GiantFall", {
         trigger: "#SkyBG",
         start: "top+=" + innerHeight * 0.05 + " top",
         toggleActions: "play none none reset",
-        markers: true
     },
     y: window.innerHeight * 4.5,
     opacity: 0,
