@@ -22,6 +22,7 @@ window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 		let releaseTimerOn = false;
 		let releaseTimer = 0;
 		let offset = 0;
+		let alpha = 0;
 
 		a.preload = () => {
 			idleCursor = a.loadImage('/Image/IdleCursor.png');

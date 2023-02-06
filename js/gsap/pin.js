@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 let smoother = ScrollSmoother.create({
     content: "#smooth_content",
@@ -63,15 +63,22 @@ gsap.to("#Structure_2", {
     }
 })
 
-gsap.to("#Structure_2", {
+const tlsef = gsap.timeline({
     scrollTrigger: {
         trigger: "#StructureContainer",
-        start: "top+=" + window.innerWidth * 0.5 + " center",
-        end: "top+=" + window.innerWidth * 0.5 + " center-=" + window.innerWidth * 0.3,
-        scrub: true,
+        start: "top top-=200",
     },
-    opacity: 1
-})
+});
+
+tlsef.fromTo("#Structure_2", 
+    {opacity: 0}, 
+    {opacity: 1, ease: "sine", duration: 1},
+)
+.fromTo("#Structure_3",
+    { opacity: 0 },
+    { opacity: 1, ease: "sine", duration: 1}, 
+    ">"
+);
 
 gsap.to("#Structure_3", {
     scrollTrigger: {
@@ -82,15 +89,6 @@ gsap.to("#Structure_3", {
     }
 })
 
-gsap.to("#Structure_3", {
-    scrollTrigger: {
-        trigger: "#StructureContainer",
-        start: "top+=" + window.innerWidth * 0.8 + " center",
-        end: "top+=" + window.innerWidth * 0.8 + " center-=" + window.innerWidth * 0.3,
-        scrub: true,
-    },
-    opacity: 1
-})
 
 gsap.from(".TitleBox1", {
     scrollTrigger: {
@@ -143,12 +141,12 @@ tlse
 gsap.to(".BigTitleBox", {
     scrollTrigger: {
         trigger: ".BigTitleBox",
-        start: "top bottom"
+        start: "top bottom",
+        toggleActions: "play none none reset"
     },
     y: -150,
-    opacity: 1,
-    duration: 1,
-    ease: "power4.out"
+    duration: 2,
+    ease: "elastic.out(1, 0.7)"
 })
 
 let tlk = gsap.timeline();
@@ -210,3 +208,22 @@ gsap.fromTo("#skyline-below",
         }
     }
 );
+
+gsap.to("#header",
+    {
+        scrollTrigger: {
+            trigger: "#SkyBG",
+            start: "top top",
+            end: "bottom+=50000 bottom",
+            pin: "#header"
+        }
+    }
+);
+
+function gotoContact(){
+    gsap.to(window, {
+        duration: 0.1, 
+        scrollTo: {y: "max"},
+        ease: "power1"
+    });
+}
