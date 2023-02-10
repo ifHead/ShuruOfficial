@@ -16,25 +16,6 @@ let isMouseDown = false;
 let isMousePressing = false;
 let isMouseReleased = false;
 
-// function cursorFade(isIn){
-//     if(isIn == "In") {
-//         alpha += 0.01;
-//         if (alpha > 1) alpha = 1;
-//         cursor.style.opacity = alpha;
-//     } else {
-//         alpha -= 0.01
-//         if (alpha < 0) alpha = 0;
-//         cursor.style.opacity = alpha;
-//     }
-// }
-
-// onmousemove = function(e){
-//     isThereMouseMoveEvent = true;
-//     alpha += 0.01;
-//     if (alpha > 1) alpha = 1;
-//     cursor.style.opacity = alpha;
-// }
-
 onmouseout = (event) => {
     isMouseIn = false;
     isMouseOut = true;

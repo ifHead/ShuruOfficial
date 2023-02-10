@@ -28,7 +28,7 @@ gsap.to("#CorpDemo", {
     scrollTrigger: {
         trigger: "#StructureContainer",
         start: "top+=" + window.innerWidth * 0.3 + " center",
-        end: "bottom bottom",
+        end: "bottom bottom+=" + window.innerHeight / 3,
         pin: "#CorpDemo",
     },
 })
@@ -36,7 +36,7 @@ gsap.to("#CorpDemo", {
 gsap.to("#CorpDemo", {
     scrollTrigger: {
         trigger: "#StructureContainer",
-        start: "top+=" + window.innerWidth + " center",
+        start: "bottom bottom+=500",
         toggleActions: "play none none reverse"
     },
     opacity: 0,
@@ -147,7 +147,7 @@ gsap.to(".BigTitleBox", {
     y: -150,
     duration: 2,
     ease: "elastic.out(1, 0.7)"
-})
+});
 
 let tlk = gsap.timeline();
 
@@ -187,7 +187,13 @@ slotPopupAnimTimeline.from("#slot-popup", {
     height: 0,
     ease: "power2.in",
 })
-.to("#slot-img", {
+.to("#slot-flex-box", {
+    opacity: 0,
+    duration: 1,
+    border: 0,
+    ease: "power3.in"
+}, "<+=0.3")
+.to("#slot-bg", {
     opacity: 0,
     duration: 1,
     border: 0,

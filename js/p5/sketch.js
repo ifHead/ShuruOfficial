@@ -6,8 +6,8 @@
 
 window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 	let releasedCursor = document.getElementById("releasedCursor");
-
 	const idleCursorCanvas = document.createElement("canvas");
+	let alpha = 0;
 
 	idleCursorCanvas.width = apng.width;
 	idleCursorCanvas.height = apng.height;
@@ -22,7 +22,6 @@ window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 		let releaseTimerOn = false;
 		let releaseTimer = 0;
 		let offset = 0;
-		let alpha = 0;
 
 		a.preload = () => {
 			idleCursor = a.loadImage('/Image/IdleCursor.png');
@@ -86,6 +85,7 @@ window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 				}
 			}
 
+			cursorFadeIO();
 			resetMouseEvents();
 		};
 
@@ -102,6 +102,26 @@ window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 			isMouseReleased = false;
 		}
 	}
+	
+	let canvasDom = document.getElementById("p5canvas_mouse");
+	let sketch_a = new p5(sa, canvasDom);
 
-	let sketch_a = new p5(sa, document.getElementById("p5canvas_mouse"));
+	function cursorFadeIO(){
+	    if(isMouseIn) {
+			if (alpha == 1) return;
+			alpha += 0.1;
+			if (alpha > 1) {
+				alpha = 1;
+				return;
+			}
+	    } else {
+			if (alpha == 0) return;
+	        alpha -= 0.1
+	        if (alpha < 0) {
+				alpha = 0;
+			}
+	    }
+		releasedCursor.style.opacity = alpha;
+		canvasDom.style.opacity = alpha;
+	}
 });

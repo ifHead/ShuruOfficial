@@ -9,6 +9,10 @@
   /* -webkit-user-drag: none; */
 }
 
+img {
+  pointer-events: none;
+}
+
 ::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari, Opera*/
@@ -83,7 +87,9 @@ body {
   background: rgb(17, 19, 64);
   width: 100vw;
   height: 150vh;
+  /* transform: translateY(500px); */
   min-height: 1000px;
+  max-height: 2000px;
   z-index: 1;
 }
 
@@ -108,13 +114,14 @@ body {
   height: 150px;
   width: 100vw;
   word-break: break-all;
-  padding: 55px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   text-align: center;
   background: linear-gradient(180deg,
       rgba(13, 11, 38, 0) 0%,
       rgba(8, 8, 20, 0.3) 30%,
       rgba(8, 8, 20, 0.6) 90%);
-  z-index: -2;
+  pointer-events: all;
+  z-index: 1;
 }
 
 #main-fg-below {
@@ -123,7 +130,7 @@ body {
   rotate: 20deg;
   left: 50%;
   top: 40%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
   width: 160vw;
   z-index: -1;
 }
@@ -180,13 +187,13 @@ body {
 
 #spec-fg-below {
   position: absolute;
-  top: 0px;
+  top: 100%;
   left: 0px;
   background-repeat: repeat;
   background-size: 40%;
   width: 100%;
   height: 230vh;
-  z-index: 0;
+  z-index: -2;
 }
 
 #CloudLineContainer {
@@ -295,6 +302,13 @@ body {
   transform: translateX(-57px);
 }
 
+#shuDance {
+  position: absolute;
+  top: 116%;
+  width: 15%;
+  left: 22%;
+}
+
 .shu {
   position: absolute;
   top: 250px;
@@ -338,7 +352,9 @@ h1 {
   left: 20%;
   margin: 0;
   z-index: 12;
-  height: 180vw;
+  height: 300vw;
+  min-height: 2600px;
+  max-height: 2000px;
   margin-bottom: 800px;
 }
 
@@ -399,40 +415,67 @@ h1 {
 /*---------------------------------------------------*/
 #slotbutton-container {
   position: relative;
-  background: url('/Image/slotbutton-bg.jpg');
-  background-size: 66%;
-  background-position: center center;
   height: 120vh;
   width: 100vw;
-  min-width: 2000px;
-  left:50%;
-  transform: translateX(-50%);
-  background-repeat: no-repeat;
   z-index: -1;
   margin-bottom: 40vh;
 }
 
-button.slotbutton {
-  position: relative;
+#slot-bg {
+  position: absolute;
+  z-index: -1;
   left: 50%;
-  transform: translateX(-50%);
-  margin-top: 13vh;
-  margin-bottom: 80vh;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100vw;
-  min-width: 1500px;
+  max-width: 120vh;
+}
+
+button.slotbutton {
+  margin-top: 30vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
   height: 86vh;
   background: none !important; 
   border: none !important;
 }
 
-#slot-img {
+#slot-flex-box {
   position: absolute;
-  top: 58%;
+  display: flex;
+  transform-origin: bottom center;
+  width: 22vw;
+  top: 50%;
   left: 50%;
-  width: 12%;
-  max-width: 30vh;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -82%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#slot-img {
+  width: 100%;
+  max-width: 23vh;
+}
+
+#shadow {
+  z-index: -1;
+  width: 80%;
+  max-width: 23vh;
+  transform: translateY(-75%);
+  opacity: 0.5;
   border: none;
+}
+
+#slot-item {
+  position: relative;
+  width: 120%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #slot-popup {
@@ -444,17 +487,19 @@ button.slotbutton {
   max-height: 65vh;
   left: 50%;
   top: 54%;
-  margin-bottom: 2vw;
+  margin-top: -20vh;
   transform: translate(-50%, -50%);
   border: none;
   font-size: 20px;
-  border-radius: 15vh;
+  border-radius: 35%;
   background-color: #ffffff;
   box-shadow:
     1vw 1vw 2vw rgba(145, 193, 255, 0.2),
     inset -0.3vw -0.3vw 3vw rgba(145, 193, 255, 0.6);
   transition-duration: 1s;
 }
+
+
 
 /*---------------------------------------------------*/
 /*---neumorphism button----------------------------------------*/
@@ -489,6 +534,7 @@ button.slotbutton {
 }
 
 .corp-logo-exp {
+  pointer-events: all;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -498,6 +544,7 @@ button.slotbutton {
 }
 
 .corp-logo {
+  pointer-events: all;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -736,12 +783,12 @@ button.slotbutton {
   justify-content: space-evenly;
   align-items: center;
   top: 62vh;
-  width: 40vh;
+  width: 30vw;
   min-width: 500px;
   max-width: 1200px;
   height: 70vh;
   min-height: 480px;
-  /* max-height: 640px; */
+  max-height: 650px;
   left: 50vw;
   transform: translateX(-50%);
   border: 0;
@@ -758,7 +805,7 @@ button.slotbutton {
   opacity: 0.75;
   width: 80px;
   height: 40px;
-  margin: 20px 0px;
+  margin: 30px 0px 55px 0px;
   background: none;
   border: 0;
   transition-duration: 0.1s;
@@ -782,14 +829,14 @@ button.slotbutton {
   color: rgb(116, 135, 173);
   text-align: center;
   font-size: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #mail-name-div {
   position: relative; 
   font-family: 'Pretendard Variable';
-  height: 45px;
+  height: 48px;
   width: 77%;
   margin-bottom: 15px;
   border-radius: 15px;
@@ -814,7 +861,7 @@ button.slotbutton {
   padding-left: 0px;
   text-indent: 25px;
   left: 50%;
-  height: 45px;
+  height: 48px;
   width: 100%;
   transform: translateX(-50%); 
   color: rgb(51, 94, 189);
@@ -827,7 +874,7 @@ button.slotbutton {
   position: relative;
   margin-bottom: 15px;
   width: 77%;
-  height: 45px;
+  height: 48px;
   border-radius: 15px;
   color: black;
   font-family: 'Pretendard Variable';
@@ -845,7 +892,7 @@ button.slotbutton {
   width: 77%;
   border-radius: 15px;
   color: black;
-  height: 30vh;
+  height: 20vh;
   font-family: 'Pretendard Variable';
   font-size: 10px;
   background: rgb(240, 240, 240);
@@ -866,7 +913,7 @@ button.slotbutton {
   line-height: 7%;
   padding-left: 0px;
   text-indent: 25px;
-  height: 45px;
+  height: 48px;
   width: 100%;
   color: rgb(51, 94, 189);
   border: none;
@@ -938,6 +985,12 @@ button.slotbutton {
   width: 12vw;
   max-width: 140px;
   transition-duration: 0.3s;
+}
+
+#header-button:active {
+  width: 10vw;
+  max-width: 120px;
+  transition-duration: 0.12s;
 }
 
 .auto-text {
