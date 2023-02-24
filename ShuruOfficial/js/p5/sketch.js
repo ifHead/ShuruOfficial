@@ -121,7 +121,8 @@ window.APNG.parseURL("/Image/ReleasedCursor.png").then((apng) => {
 				alpha = 0;
 			}
 	    }
-		releasedCursor.style.opacity = alpha;
+
 		canvasDom.style.opacity = alpha;
+		idleCursorCanvas.style.opacity = alpha;
 	}
 });

@@ -1,17 +1,12 @@
 var r = document.querySelector(':root');
 
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
 r.style.setProperty('--vh', `${vh}px`);
 
-// We listen to the resize event
 window.addEventListener('resize', () => {
-	// We execute the same script as before
 	let vh = window.innerHeight * 0.01;
 	r.style.setProperty('--vh', `${vh}px`);
 });
-
 
 //정규식으로 모바일 브라우저 판정 detectmobilebrowsers.com
 // 알려진 오류
@@ -49,9 +44,8 @@ var webkit = !!ua.match(/WebKit/i);
 var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
 
 if (isMobile || iOSSafari) {
-	console.log(isMobile)
-	console.log(iOSSafari)
-	// document.querySelector('p5canvas_mouse').remove();
-	// document.querySelector('releasedCursor').remove();
 	location.replace("/m/");
+	console.log("Mobile");
 }
+
+console.log("PC");
