@@ -308,16 +308,7 @@
   <img id="main-fg-below" src="/Image/StarsFG.png">
 </div>
 
-<div id="p5canvas_mouse"></div>
-<div id="releasedCursor" style="position: fixed; left:-9999px; top: -9999px;"></div>
-<!-- pointer-events: none; -->
-
 <script src="/js/anim/gsapAnim.js"></script>
-<script src="/js/p5/p5.min.js"></script>
-<script type="module" src="/js/p5/sketch.js"></script>
-<!-- <script src="js/p5/ShuruJump/shuruJump.js"></script> -->
-<!-- <script src="/js/util/gotoTopAndFix.js"></script> -->
-
 <script src="/js/util/mouseInfo.js"></script>
 <script src="/js/util/slightFollow.js"></script>
 
@@ -330,13 +321,13 @@
 <script src="/js/anim/MotionPathPlugin.min.js"></script>
 <script src="/js/anim/TextPlugin.min.js"></script>
 <script src="/js/anim/EasePack.min.js"></script>
-<script src="/js/gsap/scrollsmoother.js"></script>
-<script src="/js/gsap/pin.js"></script>
-<script src="/js/gsap/fall.js"></script>
 <script src="/js/jQ/jQ.js"></script>
 <script src="/js/util/slick.min.js"></script>
 <script src="/js/util/slickCustom.js"></script>
-<script src="/js/gsap/floatingLogo.js"></script>
+
+<script src="/m/js/gsap/mPin.js"></script>
+<script src="/m/js/gsap/mFall.js"></script>
+<script src="/m/js/gsap/mFloatingLogo.js"></script>
 <script>
   let isSlotFresh = true;
   let onLoadCheck = false;
@@ -350,11 +341,13 @@
     if (isSlotFresh && onLoadCheck) {
       document.getElementById("slot-img").src = "/Image/AnimatedShu/Slot.png";
       isSlotFresh = false;
+
       setTimeout(
         function () {
           slotPopupAnimTimeline.play();
         }, 1300
       );
+
       setTimeout(
         function () {
           document.getElementById("slot-img").src = "/Image/AnimatedShu/SlotSleep.png";
