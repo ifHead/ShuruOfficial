@@ -1,6 +1,6 @@
-gsap.to("#Fall1", {
+gsap.to("#fall-1", {
     scrollTrigger: {
-        trigger: "#SkyBG",
+        trigger: "#sky-bg",
         start: "top+="+innerHeight * 0.1+" top",
         toggleActions: "play none none reset"
     },
@@ -10,9 +10,9 @@ gsap.to("#Fall1", {
     duration: 4
 })
 
-gsap.to("#Fall2", {
+gsap.to("#fall-2", {
     scrollTrigger: {
-        trigger: "#SkyBG",
+        trigger: "#sky-bg",
         start: "top+=" + innerHeight * 0.1 + " top",
         toggleActions: "play none none reset",
     },
@@ -23,9 +23,9 @@ gsap.to("#Fall2", {
 })
 
 
-gsap.to("#Fall3", {
+gsap.to("#fall-3", {
     scrollTrigger: {
-        trigger: "#SkyBG",
+        trigger: "#sky-bg",
         start: "top+=" + innerHeight * 0.1 + " top",
         toggleActions: "play none none reset",
     },
@@ -36,9 +36,9 @@ gsap.to("#Fall3", {
 })
 
 
-gsap.to("#Fall4", {
+gsap.to("#fall-4", {
     scrollTrigger: {
-        trigger: "#SkyBG",
+        trigger: "#sky-bg",
         start: "top+=" + innerHeight * 0.1 + " top",
         toggleActions: "play none none reset",
     },
@@ -49,9 +49,9 @@ gsap.to("#Fall4", {
 })
 
 
-gsap.to("#Fall5", {
+gsap.to("#fall-5", {
     scrollTrigger: {
-        trigger: "#SkyBG",
+        trigger: "#sky-bg",
         start: "top+=" + innerHeight * 0.05 + " top",
         toggleActions: "play none none reset",
     },
@@ -62,9 +62,9 @@ gsap.to("#Fall5", {
 })
 
 
-gsap.to("#Fall6", {
+gsap.to("#fall-6", {
     scrollTrigger: {
-        trigger: "#SkyBG",
+        trigger: "#sky-bg",
         start: "top+=" + innerHeight * 0.05 + " top",
         toggleActions: "play none none reset",
     },
@@ -74,9 +74,9 @@ gsap.to("#Fall6", {
     rotate: 330,
 })
 
-gsap.to("#GiantFall", {
+gsap.to("#giant-fall", {
     scrollTrigger: {
-        trigger: "#SkyBG",
+        trigger: "#sky-bg",
         start: "top+=" + innerHeight * 0.05 + " top",
         toggleActions: "play none none reset",
     },

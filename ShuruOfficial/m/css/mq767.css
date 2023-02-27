@@ -1,9 +1,9 @@
 @media all and (max-width:480px) {
-    #StarSpecFG {
+    #star-spec-fg {
         background-size: 180%;
     }
 
-    #StarMainFG {
+    #star-main-fg {
         transform-origin: 0% 0%;
         rotate: 30deg;
         top: 25vh;
@@ -12,31 +12,31 @@
         z-index: 1;
     }
 
-    #LogoDeco {
+    #logo-deco {
         top: 27vh;
         width: 80%;
         z-index: 1;
     }
 
-    #BGAfterBackground {
+    #bg-after-background {
     }
 
-    #SkyLine {
+    #skyline {
         top: 35vh;
     }
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         height: 140vh;
         min-height: 1050px;
     }
 
-    #FloorWall {
+    #floor-wall {
         background-size: 0%;
         height: 300px;
         
     }
 
-    #ShuPaint {
+    #shu-paint {
 
     }
 }
@@ -46,11 +46,11 @@
         cursor: auto;
     }
 
-    #StarSpecFG {
+    #star-spec-fg {
         background-size: 120%;
     }
 
-    #StarMainFG {
+    #star-main-fg {
         transform-origin: 0% 0%;
         rotate: 30deg;
         top: 25vh;
@@ -59,37 +59,37 @@
         z-index:-1;
     }
 
-    #Logo3D {
+    #logo-3d {
         top: 35vh;
     }
 
-    #LogoDeco {
+    #logo-deco {
         top: 33vh;
         width: 90%;
         z-index: 1;
     }
 
-    #BGAfterBackground {
+    #bg-after-background {
     }   
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         height: 140vh;
         min-height: 1050px;
         background-size: 50%;
     }
 
-    #ShuPaint {
+    #shu-paint {
 
     }
 }
 
 
 @media all and (min-width: 768px) and (orientation: landscape){
-    #StarSpecFG {
+    #star-spec-fg {
         background-size: 100%;
     }
 
-    #StarMainFG {
+    #star-main-fg {
         transform-origin: 0% 0%;
         rotate: 30deg;
         top: 33vh;
@@ -99,41 +99,41 @@
         z-index: 1;
     }
 
-    #Logo3D {
+    #logo-3d {
         top: 33vh;
         top: calc(var(--vh, 1vh) * 30);
         width: 45%;
         max-width: 500px;
     }
 
-    #LogoDeco {
+    #logo-deco {
         top: 30vh;
         width: 70%;
         max-width: 800px;
         z-index: 1;
     }
 
-    #BGAfterBackground {
+    #bg-after-background {
     }    
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         height: 350vh;
         background-size: 50%;
         max-height: 3000px;
     }
 
-    #FlatSkyBG {
+    #flat-sky-bg {
         height: 350vh;
         max-height: 3000px;
     }
 }
 
 @media all and (min-width: 768px) and (orientation: portrait) {
-    #StarSpecFG {
+    #star-spec-fg {
         background-size: 100%;
     }
 
-    #StarMainFG {
+    #star-main-fg {
         transform-origin: 0% 0%;
         rotate: 30deg;
         top: 33vh;
@@ -143,29 +143,29 @@
         z-index: 1;
     }
 
-    #Logo3D {
+    #logo-3d {
         top: 33vh;
         top: calc(var(--vh, 1vh) * 30);
         width: 45%;
         max-width: 500px;
     }
 
-    #LogoDeco {
+    #logo-deco {
         top: 30vh;
         width: 70%;
         max-width: 800px;
         z-index: 1;
     }
 
-    #BGAfterBackground {}
+    #bg-after-background {}
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         height: 150vh;
         background-size: 50%;
         max-height: 2000px;
     }
 
-    #FlatSkyBG {
+    #flat-sky-bg {
         height: 150vh;
         max-height: 2000px;
     }
@@ -175,12 +175,12 @@
 /* ------------------------------------------------------------- */
 
 @media screen and (min-height:1500px) {
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         height: 350vh;
         background-size: 50%;
     }
 
-    #FlatSkyBG {
+    #flat-sky-bg {
         height: 350vh;
     }
 }

@@ -2,17 +2,20 @@
 	-ms-overflow-style: none;
 	/* IE and Edge */
 	scrollbar-width: none;
-	/* Firefox */
-	cursor: none !important;
 	/* margin: 0 !important; */
 	outline: none;
 	/* -webkit-user-drag: none; */
+	overflow-x: hidden !important;
+}
+
+img {
+	pointer-events: none;
 }
 
 html {
 	margin: 0;
 	padding: 0;
-	max-width: 100% !important;
+	width: 100vw !important;
 	overflow-x: hidden !important;
 	-webkit-overflow-x: hidden !important;
 	-webkit-box-sizing: border-box;
@@ -26,8 +29,9 @@ body {
 	padding: 0;
 	overflow-x: hidden !important;
 	overflow-y: hidden;
-	max-width: 100% !important;
+	width: 100vw !important;
 	-webkit-box-sizing: border-box;
+	
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
@@ -48,7 +52,7 @@ body {
 	height: 100%;
 }
 
-#SpaceContainer {
+#space-container {
 	position: relative;
 	display: block;
 	height: both;
@@ -109,7 +113,7 @@ body {
 	z-index: -1;
 }
 
-#SkyBG {
+#sky-bg {
 	position: absolute;
 	margin: 0px;
 	padding: 0px;
@@ -123,7 +127,7 @@ body {
 	min-height: 600px;
 }
 
-#StarSpecFG {
+#star-spec-fg {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -134,21 +138,21 @@ body {
 	height: 200vh;
 	z-index: 0;
 }
-
-#StarMainFG {
+#star-main-fg {
 	position: absolute;
+	overflow-x: hidden;
 	transform-origin: 0 0;
 	rotate: 15deg;
 	left: 50%;
 	top: 40vh;
 	transform: translate(-50%, -58%);
-	width: 150%;
+	width: 150vw;
 	max-width: 2500px;
 	min-height: 100px;
 	z-index: 1;
 }
 
-#SkyLine {
+#skyline {
 	position: absolute;
 	top: 50vh;
 	width: 100%;
@@ -167,20 +171,20 @@ body {
 	z-index: -2;
 }
 
-#CloudLineContainer {
+#cloud-line-container {
 	position: absolute;
 	top: 100vh;
 	width: 100vw;
 	z-index: 3;
 }
 
-#CloudLine {
+#cloud-line {
 	position: relative;
 	width: 100%;
 	z-index: 2;
 }
 
-#BGAfterBackground {
+#bg-after-background {
 	position: relative;
 	width: 100vw;
 	height: 270vh;
@@ -192,26 +196,27 @@ body {
 			rgba(105, 187, 249, 0) 100%);
 }
 
-#Logo3D {
+#logo-3d {
 	position: absolute;
-	top: 25vh;
 	left: 50%;
+	top: 33vh;
 	width: 50%;
 	min-height: 50px;
 	transform: translate(-50%, -50%);
 	z-index: 1;
 }
 
-#LogoDeco {
+#logo-deco {
 	position: absolute;
-	top: 35vh;
-	left: 50%;
-	width: 70%;
-	min-height: 100px;
+	top: 38vh;
+	left: 51.5%;
+	width: 80%;
+	min-height: 50px;
 	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
-#FlatSkyBG {
+#flat-sky-bg {
 	position: relative;
 	padding-top: 100vh;
 	height: 100vh;
@@ -220,7 +225,7 @@ body {
 	z-index: -2;
 }
 
-#FlatSkyCloud {
+#flat-sky-cloud {
 	position: relative;
 	background-image: url("/Image/Cloud.png");
 	height: 100vh;
@@ -231,7 +236,7 @@ body {
 	z-index: -2;
 }
 
-#FloorWall {
+#floor-wall {
 	position: relative;
 	z-index: -2;
 	top: -2px;
@@ -241,7 +246,7 @@ body {
 	background-repeat: repeat;
 }
 
-#FloorWallProgress {
+#floor-wall-progress {
 	position: absolute;
 	background-image: url("/Image/FloorWallProgress.jpg");
 	width: 890px;
@@ -258,8 +263,7 @@ body {
 /*--------------------------------------*/
 /*------Chars---------------------------*/
 /*--------------------------------------*/
-
-#ShuPaint {
+#shu-paint {
 	position: relative;
 	background-image: url("/Image/AnimatedShu/shuPaint.png");
 	top: 250px;
@@ -271,7 +275,7 @@ body {
 	transform: translateX(-57px);
 }
 
-#shuDance {
+#shu-dance {
 	position: absolute;
 	top: 116%;
 	width: 15%;
@@ -287,7 +291,6 @@ body {
 	background-repeat: no-repeat;
 	transform: translateX(-57px);
 }
-
 
 @font-face {
 	font-family: 'Pretendard Variable';
@@ -310,80 +313,10 @@ h1 {
 	font-weight: 400;
 }
 
-#FlatSkyBG {
-	position: relative;
-	top:0vw;
-	height: 150vh;
-	min-height: 1100px;
-	width: 100%;
-	background-color: rgb(105, 187, 249);
-	z-index: -1;
-}
-
-#FlatSkyCloud {
-	position: relative;
-	background-image: url("/Image/Cloud.png");
-	width: 100%;
-	height: 145vh;
-	background-size: 100%;
-	background-repeat: repeat round;
-}
-
-#FloorWall {
-	position: relative;
-	z-index: 2;
-	top: -1px;
-	width: 100%;
-	height: 650px;
-	background-image: url("/Image/FloorWallClear.jpg");
-	background-repeat: repeat;
-}
-
-#FloorWallProgress {
-	position: absolute;
-	background-image: url("/Image/FloorWallProgress.jpg");
-	width: 890px;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 650px;
-}
-/*--------------------------------------*/
-/*------Chars---------------------------*/
-/*--------------------------------------*/
-
-#ShuPaint {
-	position: relative;
-	background-image: url("/Image/AnimatedShu/shuPaint.png");
-	top: 250px;
-	left: 50%;
-	width: 320px;
-	height: 500px;
-	background-size: 50%;
-	background-repeat: no-repeat;
-	transform: translateX(-57px);
-}
-
-#shuDance {
-	position: absolute;
-	top: 116%;
-	width: 15%;
-	left: 22%;
-}
-
-.shu {
-	position: absolute;
-	top: 250px;
-	width: 7vw;
-	background-size: 50%;
-	z-index: 10;
-	background-repeat: no-repeat;
-	transform: translateX(-57px);
-}
-
 /*---------------------------------------------------*/
 /*---gsap-------------------------------*/
 /*---------------------------------------------------*/
-#StructureContainer {
+#structure-container {
 	position: relative;
 	padding: 0;
 	width: 100vw;
@@ -395,8 +328,7 @@ h1 {
 	max-height: 2000px;
 	margin-bottom: 800px;
 }
-
-#Structure_1 {
+#structure-1 {
 	position: absolute;
 	top: 0px;
 	opacity: 1;
@@ -408,7 +340,7 @@ h1 {
 	background-repeat: no-repeat;
 }
 
-#Structure_2 {
+#structure-2 {
 	position: absolute;
 	top: 0px;
 	width: 100vw;
@@ -420,7 +352,7 @@ h1 {
 	background-repeat: no-repeat;
 }
 
-#Structure_3 {
+#structure-3 {
 	position: absolute;
 	top: 0px;
 	width: 100vw;
@@ -432,7 +364,7 @@ h1 {
 	background-repeat: no-repeat;
 }
 
-#CorpDemo {
+#corp-demo {
 	position: absolute;
 	top: 0;
 	width: 45%;
@@ -441,17 +373,16 @@ h1 {
 	z-index: 12;
 }
 
-#CorpDemoContent {
+#corp-demo-content {
 	position: relative;
 	top: 0;
 	width: 100%;
 	height: 63.3vw;
 }
-
 /*---------------------------------------------------*/
 /*-------Interactive----------------------------------*/
 /*---------------------------------------------------*/
-#slotbutton-container {
+#slot-button-container {
 	position: relative;
 	height: 120vh;
 	width: 100vw;
@@ -469,7 +400,7 @@ h1 {
 	max-width: 120vh;
 }
 
-button.slotbutton {
+button.slot-button {
 	margin-top: 30vh;
 	position: absolute;
 	left: 50%;
@@ -532,7 +463,7 @@ button.slotbutton {
 	border-radius: 35%;
 	background-color: #ffffff;
 	box-shadow:
-		1vw 1vw 2vw rgba(145, 193, 255, 0.2),
+		2vw 2vw 3vw rgba(145, 193, 255, 0.2),
 		inset -0.3vw -0.3vw 3vw rgba(145, 193, 255, 0.6);
 	transition-duration: 1s;
 }
@@ -542,7 +473,7 @@ button.slotbutton {
 /*---------------------------------------------------*/
 /*---neumorphism button----------------------------------------*/
 /*----------------------------------------------------*/
-.ClayButton {
+.clay-button {
 	position: relative;
 	display: block;
 	height: 13vw;
@@ -560,7 +491,7 @@ button.slotbutton {
 	transition-duration: 1s;
 }
 
-.ClayButton:hover {
+.clay-button:hover {
 	cursor: none;
 	height: 15vw;
 	width: 15vw;
@@ -621,7 +552,7 @@ button.slotbutton {
 /*-------------------------------*/
 /*-------------Clay-------------*/
 
-.Clay {
+.clay {
 	backdrop-filter: blur(4px);
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 1.5em;
@@ -630,7 +561,7 @@ button.slotbutton {
 		inset 0px 1em 1em rgb(255, 255, 255);
 }
 
-.BigTitleBox {
+.big-title-box {
 	font-family: 'Pretendard Variable';
 	word-break: keep-all;
 	position: relative;
@@ -649,7 +580,7 @@ button.slotbutton {
 	z-index: 1;
 }
 
-.TitleBox1 {
+.title-box-1 {
 	position: relative;
 	font-family: 'Pretendard Variable';
 	font-weight: 700;
@@ -663,7 +594,7 @@ button.slotbutton {
 	color: rgb(72, 72, 136);
 }
 
-.TitleBox2 {
+.title-box-2 {
 	position: relative;
 	font-family: 'Pretendard Variable';
 	font-weight: 700;
@@ -676,7 +607,7 @@ button.slotbutton {
 	color: rgb(72, 72, 136);
 }
 
-.TitleBox3 {
+.title-box-3 {
 	font-family: 'Pretendard Variable';
 	font-weight: 700;
 	text-align: center;
@@ -717,14 +648,14 @@ button.slotbutton {
 	/* background-color: #ffdb01 */
 }
 
-#ShuPush {
+#shu-push {
 	position: relative;
 	float: left;
 	margin-left: 2vw;
 	height: 100%;
 }
 
-#GrowText {
+#grow-text {
 	position: relative;
 	float: left;
 	height: 100%;
@@ -732,7 +663,7 @@ button.slotbutton {
 	color: #0066b5
 }
 
-#AirPlane {
+#airplane {
 	position: absolute;
 	top: 150vh;
 	left: 100vw;
@@ -742,7 +673,7 @@ button.slotbutton {
 	opacity: 1;
 }
 
-#FallFrame {
+#fall-frame {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
@@ -751,7 +682,7 @@ button.slotbutton {
 	background: blue;
 }
 
-#Fall1 {
+#fall-1 {
 	position: absolute;
 	top: -20vh;
 	height: 20vh;
@@ -760,7 +691,7 @@ button.slotbutton {
 	z-index: 3;
 }
 
-#Fall2 {
+#fall-2 {
 	position: absolute;
 	top: -40vh;
 	height: 40vh;
@@ -769,7 +700,7 @@ button.slotbutton {
 	z-index: 3;
 }
 
-#Fall3 {
+#fall-3 {
 	position: absolute;
 	top: -20vh;
 	height: 17vh;
@@ -778,7 +709,7 @@ button.slotbutton {
 	z-index: 3;
 }
 
-#Fall4 {
+#fall-4 {
 	position: absolute;
 	top: -40vh;
 	height: 40vh;
@@ -787,7 +718,7 @@ button.slotbutton {
 	z-index: 3;
 }
 
-#Fall5 {
+#fall-5 {
 	position: absolute;
 	top: -20vh;
 	height: 18vh;
@@ -796,7 +727,7 @@ button.slotbutton {
 	z-index: 3;
 }
 
-#Fall6 {
+#fall-6 {
 	position: absolute;
 	top: -20vh;
 	height: 15vh;
@@ -805,7 +736,7 @@ button.slotbutton {
 	z-index: 3;
 }
 
-#GiantFall {
+#giant-fall {
 	position: absolute;
 	top: -50vw;
 	height: 50vw;
@@ -997,7 +928,7 @@ button.slotbutton {
 	pointer-events: none;
 }
 
-#header-button {
+.header-button {
 	font-family: 'Pretendard Variable';
 	background: rgba(255, 255, 255, 0.9);
 	font-weight: 700;
@@ -1034,19 +965,7 @@ button.slotbutton {
 	transition-duration: 0.12s;
 }
 
-.auto-text {
-	font-family: 'Pretendard Variable';
-	position: absolute;
-	font-size: 25px;
-	top: 0px;
-	margin-top: 60px;
-	color: rgba(255, 255, 255, 0.65);
-	z-index: 101;
-	left: 5vw;
-}
-
 /*--------*/
-
 
 input::-webkit-input-placeholder {
 	font-size: 1em;
