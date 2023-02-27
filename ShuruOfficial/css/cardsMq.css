@@ -4,7 +4,7 @@
         height: 0vw;
     }
 
-    .ClayButton {
+    .clay-button {
         top: 25vw;
         height: 40vw;
         width: 40vw;
@@ -15,7 +15,7 @@
             inset 0.3vw 0.3vw 4vw rgb(145, 193, 255, 0.02);
     }
 
-    .ClayButton:hover {
+    .clay-button:hover {
         height: 45vw;
         width: 45vw;
         border-radius: 15vw;
@@ -43,7 +43,7 @@
         height: 58vw;
     }
 
-    .ClayButton {
+    .clay-button {
         top: 15vw;
         height: 25vw;
         width: 25vw;
@@ -55,7 +55,7 @@
             inset 0.3vw 0.3vw 2vw rgb(145, 193, 255, 0.02);
     }
 
-    .ClayButton:hover {
+    .clay-button:hover {
         height: 28vw;
         width: 28vw;
         margin-bottom: 1vw;
@@ -83,7 +83,7 @@
         margin-bottom: 0vw;
     }
 
-    .ClayButton {
+    .clay-button {
         border-radius: 9vw;
         top: 12vw;
         height: 22vw;
@@ -95,7 +95,7 @@
             inset 0.3vw 0.3vw 2vw rgb(145, 193, 255, 0.02);
     }
 
-    .ClayButton:hover {
+    .clay-button:hover {
         height: 24vw;
         width: 24vw;
         margin-bottom: 0vw;

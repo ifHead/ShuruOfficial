@@ -9,11 +9,11 @@
         cursor: auto;
     }
     
-    #SkyBG {
+    #sky-bg {
         height: 65vh;
     }
 
-    #StarMainFG {
+    #star-main-fg {
         transform-origin: 0% 0%;
         rotate: 60deg;
         top: 30vh;
@@ -22,13 +22,13 @@
         z-index: 1;
     }
 
-    #Logo3D {
+    #logo-3d {
         width: 55%;
         top: 28vh;
         transform: translate(-50%, -50%);
     }
 
-    #LogoDeco {
+    #logo-deco {
         top: 30vh;
         left: 50%;
         width: 90% !important;
@@ -36,33 +36,33 @@
         transform: translate(-50%, -50%);
     }
 
-    #StarSpecFG {
+    #star-spec-fg {
         position: absolute;
         background-size: 80%;
     }
 
-    #SkyLine {
+    #sky-line {
         top: 50vh !important;
         width: 120%;
         transform: translateX(-10%);
         z-index: 1;
     }
 
-    #FlatSkyBG {
+    #flat-sky-bg {
         min-height: 1500px;
     }
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         min-height: 1500px;
         background-size: 100%;
     }
     
-    .BigTitleBox {
+    .big-title-box {
         font-size: 35px;
         width: 60%;
     }
 
-    #Band {
+    #band {
         margin-top: 0;
         height: 60px;
         margin-bottom: 0;
@@ -74,7 +74,7 @@
 }
 
 @media all and (min-width: 768px) and (max-width:1320px){
-    #StarMainFG {
+    #star-main-fg {
         transform-origin: 0% 0%;
         rotate: 50deg;
         top: 30vh;
@@ -83,77 +83,77 @@
         z-index: 1;
     }
 
-    #SkyBG {
+    #sky-bg {
         height: 90vh;
     }
 
-    #FlatSkyBG {
+    #flat-sky-bg {
         min-height: 1500px;
     }
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         min-height: 1500px;
         background-size: 50%;
     }
 
-    #SkyLine {
+    #sky-line {
         top: 50vh;
         z-index: 1;
     }
 
-    #Logo3D {
+    #logo-3d {
         width: 35%;
         top: 35vh;
     }
 
-    #LogoDeco{
+    #logo-deco{
         width: 70%;
         transform: translate(-53%, -50%);
         top: 35vh;
     } 
 
-    .BigTitleBox {
+    .big-title-box {
         font-size: 41px;
         width: 60%;
     }
 
-    #Band {
+    #band {
         height: 80px;
     }
 }
 /* ------------------------------------------------------------- */
 /* ------------------------------------------------------------- */
 @media all and (min-width: 1321px) and (max-width:1920px) {
-    #SkyBG {
+    #sky-bg {
         min-height: 1500px;
     }
     
-    #FlatSkyBG {
+    #flat-sky-bg {
         padding-top: 120vh;
         min-height: 2000px;
     }
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         min-height: 2000px;
         background-size: 50%;
     }
 
-    #Logo3D {
+    #logo-3d {
         width: 37%;
         top: 42vh;
     }
 
-    #LogoDeco {
+    #logo-deco {
         width: 80%;
         transform: translate(-53%, -50%);
     }
 
-    .BigTitleBox {
+    .big-title-box {
         font-size: 65px;
         width: 60%;
     }
 
-    #Band {
+    #band {
         height: 100px;
     }
 }
@@ -164,54 +164,54 @@
         cursor: auto;
     }
 
-    #SkyBG{
+    #sky-bg{
         height: 120vh;
         min-height: 2000px;
     }
 
-    #Logo3D {
+    #logo-3d {
         transform: translate(-50%, -50%);
         top: 45vh;
         width: 35vw;
         width: 700px;
     }
 
-    #LogoDeco {
+    #logo-deco {
         top: 45vh;
         width: 70%;
         transform: translate(-53%, -50%);
         max-width: 2000px;
     }
 
-    #SkyLine {
+    #sky-line {
         width: 100%;
         background-size: 100%;
     }
 
-    #StarSpecFG {
+    #star-spec-fg {
         height: 100vh;
         background-size: 30%;
     }
 
-    #StarMainFG {
+    #star-main-fg {
         top: 50vh;
     }
 
-    #FlatSkyBG {
+    #flat-sky-bg {
         min-height: 3300px;
     }
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         min-height: 3100px;
         background-size: 25%;
     }
 
-    .BigTitleBox {
+    .big-title-box {
         font-size: 4vw;
         width: 60%;
     }
 
-    #Band {
+    #band {
         height: 130px;
     }
 }
@@ -219,51 +219,51 @@
 /* ------------------------------------------------------------- */
 
 @media screen and (min-height:1200px) and (max-height:1599px) {
-    #SkyBG {
+    #sky-bg {
         height: 80vh;
     }
 
-    #SkyLine {
+    #sky-line {
         top: 42vh;
     }
 
-    #Logo3D {
+    #logo-3d {
         top: 42vh;
     }
 
-    #LogoDeco {
+    #logo-deco {
         width: 60%;
         top: 43vh;
     }
 
-    #StarMainFG{
+    #star-main-fg{
         top: 43vh;
     }
 
 
-    #FlatSkyBG {
+    #flat-sky-bg {
          
     }
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         background-size: 50%;
     }
 }
 
 
 @media screen and (min-height:1600px) {
-    #StarMainFG{
+    #star-main-fg{
         top: 28vh;
         width: 250vw;
     }
 
-    #Logo3D {
+    #logo-3d {
         max-width: 1000px;
         top: 30vh;
         width: 50%;
     }
 
-    #LogoDeco {
+    #logo-deco {
         position: absolute;
         max-width: 1600px;
         top:35vh;
@@ -271,26 +271,26 @@
         transform: translate(-50%, -50%);
     }
 
-    #SkyBG {
+    #sky-bg {
         height: 70vh;
     }
 
-    #StarSpecFG {
+    #star-spec-fg {
         position: absolute;
         background-size: 40%;
     }
 
-    #SkyLine {
+    #sky-line {
         top: 40vh;
         width: 120%;
         transform: translateX(-10%);
         z-index: 1;
     }
 
-    #FlatSkyBG {
+    #flat-sky-bg {
     }
 
-    #FlatSkyCloud {
+    #flat-sky-cloud {
         background-size: 50%;
     }
 }

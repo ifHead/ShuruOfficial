@@ -5,9 +5,9 @@ let smoother = ScrollSmoother.create({
     smooth: 1.3,
 });
 
-gsap.to("#AirPlane", {
+gsap.to("#airplane", {
     scrollTrigger: {
-        trigger: "#AirPlane",
+        trigger: "#airplane",
         start: "top bottom",
         toggleActions: "play none resume reset"
     },
@@ -24,18 +24,18 @@ window.addEventListener("resize", () => {
     }, 200);
 });
 
-gsap.to("#CorpDemo", {
+gsap.to("#corp-demo", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top+=" + window.innerWidth * 0.3 + " center",
         end: "bottom bottom+=" + window.innerHeight / 3,
-        pin: "#CorpDemo",
+        pin: "#corp-demo",
     },
 })
 
-gsap.to("#CorpDemo", {
+gsap.to("#corp-demo", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "bottom bottom+=500",
         toggleActions: "play none none reverse"
     },
@@ -43,56 +43,56 @@ gsap.to("#CorpDemo", {
     duration: 0.2,
 })
 
-gsap.to("#Structure_1", {
+gsap.to("#structure-1", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top+=" + window.innerWidth * 0.3 + " center",
         end: "bottom bottom",
-        pin: "#Structure_1",
+        pin: "#structure-1",
         scrub: true,
     },
 })
 
-gsap.to("#Structure_2", {
+gsap.to("#structure-2", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top+=" + window.innerWidth * 0.3 + " center",
         end: "bottom bottom",
-        pin: "#Structure_2",
+        pin: "#structure-2",
         scrub: true,
     }
 })
 
 const tlsef = gsap.timeline({
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top top-=200",
     },
 });
 
-tlsef.fromTo("#Structure_2", 
+tlsef.fromTo("#structure-2", 
     {opacity: 0}, 
     {opacity: 1, ease: "sine", duration: 1},
 )
-.fromTo("#Structure_3",
+.fromTo("#structure-3",
     { opacity: 0 },
     { opacity: 1, ease: "sine", duration: 1}, 
     ">"
 );
 
-gsap.to("#Structure_3", {
+gsap.to("#structure-3", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top+=" + window.innerWidth * 0.3 + " center",
         end: "bottom bottom",
-        pin: "#Structure_3",
+        pin: "#structure-3",
     }
 })
 
 
-gsap.from(".TitleBox1", {
+gsap.from(".title-box-1", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top+=" + window.innerWidth * 0.3 + " center",
         toggleActions: "play pause resume reverse"
     },
@@ -102,9 +102,9 @@ gsap.from(".TitleBox1", {
     ease: "elastic.out(1, 0.6)"
 })
 
-gsap.from(".TitleBox2", {
+gsap.from(".title-box-2", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top+=" + window.innerWidth * 0.3 + " center",
         toggleActions: "play pause resume reverse"
     },
@@ -114,9 +114,9 @@ gsap.from(".TitleBox2", {
     ease: "elastic.out(1, 0.6)"
 })
 
-gsap.from(".TitleBox3", {
+gsap.from(".title-box-3", {
     scrollTrigger: {
-        trigger: "#StructureContainer",
+        trigger: "#structure-container",
         start: "top+=" + window.innerWidth * 0.3 + " center",
         toggleActions: "play pause resume reverse"
     },
@@ -129,18 +129,18 @@ gsap.from(".TitleBox3", {
 let tlse = gsap.timeline();
 
 tlse
-.to("#CloudLineContainer", {
+.to("#cloud-line-container", {
     scrollTrigger: {
-        trigger: "#CloudLineContainer",
+        trigger: "#cloud-line-container",
         start: "top bottom",
         scrub: true
     },
     y: -window.innerHeight * 2.2
 });
 
-gsap.to(".BigTitleBox", {
+gsap.to(".big-title-box", {
     scrollTrigger: {
-        trigger: ".BigTitleBox",
+        trigger: ".big-title-box",
         start: "top bottom",
         toggleActions: "play none none reset"
     },
@@ -218,7 +218,7 @@ gsap.fromTo("#skyline-below",
 gsap.to("#header",
     {
         scrollTrigger: {
-            trigger: "#SkyBG",
+            trigger: "#sky-bg",
             start: "top top",
             end: "bottom+=50000 bottom",
             pin: "#header"
