@@ -1,3 +1,2 @@
 # ShuruOfficialWeb
-SOON
-Be back
+
